@@ -41,10 +41,6 @@ def bundle_packages(packages):
             if new_delay + buffer > min_deadline:
                 is_compatible = False
 
-            # optional refrig constraint
-            # if p.refrigerated != current_bundle_packages[0].refrigerated:
-            #     is_compatible = False
-
             if is_compatible:
                 current_bundle_packages.append(p)
             else:
@@ -273,8 +269,7 @@ def genetic_algorithm(packages, num_trucks, trucks, capacity,
     population = create_population(bundles, num_trucks, pop_size)
     previous_best_score = float('inf')
     stagnation_counter = 0
-    # u variable is used to keep track of generation modulo
-    u = -1
+    milestone_count = 0
 
     for generation in range(generations):
         # get the overall population fitness for each chromosome
@@ -287,10 +282,12 @@ def genetic_algorithm(packages, num_trucks, trucks, capacity,
         early_chromosome = scored_pop[0][1]
 
         # implement adaptive mutation rates
-        if best_score < previous_best_score:
+        # require >0.1% improvement to reset stagnation — prevents thrashing
+        # in flat fitness landscapes where tiny gains would keep the counter low
+        if previous_best_score == float('inf') or \
+                best_score < previous_best_score * 0.999:
             previous_best_score = best_score
             stagnation_counter = 0
-            # reset the 'heat'
             mutation_rate = original_mutation_rate
         else:
             stagnation_counter += 1
@@ -307,15 +304,9 @@ def genetic_algorithm(packages, num_trucks, trucks, capacity,
         # progress update
         ten_percent_num = generations / 10
         if generation % ten_percent_num == 0:
-            u += 1
+            milestone_count += 1
             print(
-            f'{u} / 10 | Gen {generation} | Best Score = {best_score:.2f}')
-
-            # debugging, shows sentinel positions
-            # sentinel_positions = \
-            #               [i for i, gene in enumerate(scored_pop[0][1])
-            #                if (gene < 0)]
-            # print(sentinel_positions)
+            f'{milestone_count} / 10 | Gen {generation} | Best Score = {best_score:.2f}')
 
         # start creating new population
         new_population = []

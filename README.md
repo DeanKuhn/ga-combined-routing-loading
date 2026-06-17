@@ -1,85 +1,212 @@
 # WGUPS Routing Program
-A package delivery routing system improved from the original submission for WGU's C950 Data Structures & Algorithms II capstone project.
+A configurable, constraint-aware optimizer for the **Vehicle Routing Problem with Time Windows (VRP-TW)** — rebuilt from a static academic submission into a production-grade routing engine driven by a custom genetic algorithm.
 
-## Why improve?
-Originally, the program was not fit for real-world implication. For example:
-- **Randomness:** The algorithm ran on an unchanged package CSV file.  In the real world, package counts, delays, and deadlines change day to day.  The new algorithm must be able to handle this randomness.
-- **Flexibility:** Package-to-truck assignment was hard-coded.  In a real-world application, there is not enough time to find an optimized truck-loading sequence.  The improved algorithm must not only deliver packages efficiently but also load them optimally.
-- **Scale:** Package and truck count were constant.  The algorithm only worked if there were exactly 40 packages and exactly three trucks.  The new algorithm must be able to scale to meet increased company demand.
+---
 
-## New features
-- **Genetic Algorithm Implementation:** The previous algorithm's K Nearest Neighbor algorithm was completely replaced by a Genetic Algorithm that simultaneously optimized package-to-truck assignment while finding efficient package delivery routes for each truck.
-- **Package/Truck Generation:** To account for day-to-day uncertainty and company scalability, packages are generated randomly for each GA run.  Trucks are then generated to scale based on the package load automatically.
-- **Custom Constraints:** Because different businesses may have different constraints, truck capacity and refrigeration capabilities are customizable via the CLI.  Additionally, the GA's parameters are customizable.  This gives companies the ability to (1) run quick and cheap GA runs if time is a constraint, or (2) run computationally expensive GA runs if they have the resources and time to do so.
+## Overview
 
-## Changelog
-### v4.0 - Finalized & Operational Program
-#### *GA Improvements*
-**Bundling Implementation:** A pre-processing layer was added to the GA that groups packages with the same addresses into bundles.  This bundle is then checked to ensure that `max(delay_times) + buffer < min(deadlines)`.  This ensures that the timing within this bundle is physically possible (for example, a package with a `delay_time` of 9:30 am cannot go in the same bundle as a package with a `deadline` of 9:00 am).  By bundling packages, the GA's search space is reduced, increasing the likelihood of earlier convergence.
+The VRP-TW is NP-hard: as the number of packages, trucks, and constraints grows, exact solutions become computationally intractable. This project applies a **genetic algorithm (GA)** that sidesteps the combinatorial explosion while still converging on near-optimal solutions — without the blind spots of greedy heuristics.
 
-**Bug Reductions:** An error was identified within the GA's fitness function where `Truck` objects were maintaining state across GA generations.  This resulted in every truck leaving at the latest possible `delay_time`.  By fixing this issue, the GA was able to better load trucks based on package delay times.
+The core engineering challenge is that VRP-TW has two interleaved sub-problems:
+1. **Assignment** — which packages go on which truck
+2. **Sequencing** — in what order each truck delivers its packages
 
-**Precise Penalty Scoring:** The GA's fitness function was updated with a `minutes_late * multiplier` penalty.  This creates a gradient descent, allowing the GA to see the difference between a package being five minutes late versus five hours late.
+Most implementations solve these in two separate passes. This GA solves both simultaneously using a single chromosome representation, allowing assignment and sequencing decisions to co-evolve and inform each other throughout optimization.
 
-**Improving Computational Efficiency:** The previous chromosome sentinels (`'|1|'`) were replaced with numeric sentinels (`-1`), allowing computationally expensive sentinel checks (`isinstance(gene, str)`) to be replaced with computationally light numerical comparison checks (`if gene < 0`).  Comparing a number to zero is the fastest possible comparison in Python.  This lightens the load of the already expensive GA just a bit, but makes a meaningful difference across thousands of generations.
+---
 
-**Adaptive Mutation:** If the GA's best score doesn't improve within 50 generations, the mutation rate doubles to 'heat' the population, hopefully allowing the GA to escape local optima.  Crucially, a reset to the baseline mutation rate was implemented once a new best score was found, allowing the algorithm to 'cool down' and refine a discovery.
+## Getting Started
 
-**Scramble & Inversion Mutation:** The mutation function was improved to include both scramble and inversion mutation.  These contributions allow the GA to explore the search space better while avoiding early convergence.
+**Prerequisites:** [uv](https://docs.astral.sh/uv/)
 
-**Early Return:** If the GA's best score doesn't improve within 500 generations, the GA will terminate early and return the best score.  This allows a user to run the GA to its limit by specifying an astronomically high generation parameter and waiting for it to return once an optimal chromosome has been found.
+```bash
+git clone <repo-url>
+cd c950
+uv sync
+```
 
-#### *CLI Enhancements*
-**Custom CLI Implementation:** A configurable interface was developed that allows the user to test the GA's hyperparameters in real time with a custom number of packages and deadline/delay/refrigeration requirements.  The user can enter the number of packages to generate, the percentage of those packages with deadlines, delays, and refrigeration requirements, choose the number of trucks, determine truck capacity/refrigeration capabilities, and set the parameters for the GA function, including `pop_size`, `generations`, and `mutation_rate`.
+**Run the program:**
+```bash
+uv run main.py
+```
 
-**Lookup Functions:** The CLI was updated with lookup functions allowing the user to see a package's delivery status, delivery time, delay, and deadline by entering either the package's ID or address.  If multiple packages are assigned to an address, the CLI will list each package's information.  The package statistics shown are based on the most recent GA run, allowing users to see the performance of individual packages for their customized GA iteration.
+**Run the test suite:**
+```bash
+uv run pytest
+```
 
-### v3.0 - Complete Project Overhaul
-#### *Architectural drifts*
-**Removal of Custom Structures:** Custom Hash Tables were replaced with Python dictionaries.  While the original C950 submission did not allow the use of Python dictionaries, it was determined that this constraint was unnecessary and hindered the program's development.
+---
 
-**Simplicity:** It was decided to remove K-Means, MDS clustering, K Nearest Neighbors, and 2-opt. While these algorithms contributed to a seemingly more 'advanced' algorithm, they added unnecessary complexity and detracted from the program's interpretability.  The system now uses a single GA to solve the package placement and truck delivery order.
+## Why Rebuild?
 
-#### *GA Evolution*
-**Sentinel-Based Chromosome Organization:** The chromosome's makeup was redone.  Originally, the chromosome did not factor in delivery order; it only determined which packages went on which truck.  Now, chromosomes include the delivery order for all trucks, with sentinels (e.g., `|1|`) serving as boundaries between truck routes.
+The initial academic submission had three fundamental limitations that made it unfit for any real-world deployment:
 
-**Capacity-Aware Population Generation:** Originally, packages and sentinels were seeded randomly within the chromosome.  Now, the population generation function generates package placement based on truck capacity, giving the GA a slight 'nudge' in the right direction.
+- **No randomness tolerance.** The algorithm ran against a fixed, hand-crafted package CSV. Real logistics operations have different package counts, deadlines, and availability windows every day. The system had no mechanism to handle this variance.
+- **Hard-coded loading.** Package-to-truck assignments were written directly into the source code. Any change required a developer to manually re-optimize and redeploy. There was no automated loading logic.
+- **Zero scalability.** The algorithm assumed exactly 40 packages and exactly 3 trucks. It would produce incorrect results at any other scale.
 
-**Improved Fitness Scoring:** Scoring weights were rebalanced and organized into groups, such as `distance_score`, `num_capacity_over`, and `refrig_violations`.  This way, the fitness function can be fine-tuned with greater precision.
+The rebuild addressed all three: packages are procedurally generated with configurable constraint distributions, loading is fully automated by the GA, and truck count scales dynamically with package volume.
 
-- **Return to HUB Incorporation:** The GA's fitness model penalizes trucks that end their route farther away from the HUB by adding the return trip's distance to the overall distance score.
+---
 
-- **Sentinel-Aware Ordered Crossover:** The GA's crossover function was modified so that sentinel positions are not accidentally swapped with package elements.
+## Architecture
 
-- **Multiple Mutation Strategies:** The mutation function now combines package swapping with sentinel shifting to ensure that the GA is allowed to adjust truck capacity.  Otherwise, the population generation's sentinel encoding would be permanent.
+```
+main.py
+  └── run_cli()                    [cli.py]
+       ├── load_csvs()             [loaders.py]  → distance matrix, address index
+       └── run_ga()                [cli.py]      → user-configured GA parameters
+            └── genetic_algorithm()              [genetic_algorithm.py]
+                 ├── bundle_packages()           → pre-processing: reduces search space
+                 ├── create_population()         → capacity-aware chromosome seeding
+                 ├── [GA loop]
+                 │    ├── fitness()              → multi-objective scoring
+                 │    ├── tournament_selection() → k=3 pressure selection
+                 │    ├── ordered_crossover()    → sentinel-aware recombination
+                 │    └── mutate()               → four-strategy adaptive mutation
+                 └── load_chromosome()           → assigns packages to truck objects
+                      └── run_simulation()       [simulation.py]  → delivery execution
+```
 
-### v2.0 - Genetic Algorithm Loading (in progress)
-- Replaced hard-coded truck loading with a genetic algorithm
-- Implemented K-Means geographic pre-clustering using MDS to convert the distance matrix into approximate 2D coordinates
-- The GA chromosome encodes each truck's package assignments as a flat index list
-- Fitness function scores chromosomes across multiple weighted areas:
-  - Hard constraints: capacity, delayed packages
-  - Deadlines: exponential penalty for too many early deadlines on one truck
-  - Weight balance: penalizes uneven weight distribution across trucks
-  - Geography: rewards closer packages on the same truck (used the KMeans clustering)
-  - Delay grouping: penalizes delayed packages spread across trucks
-- Smart population seeding makes sure refrigerated packages are on refrigerated-capable trucks from generation zero
-- Mutation keeps refrigeration constraints during random reassignment
-- Elitism preserves the best chromosome across generations
-- Departure times are calculated dynamically based on the actual time of the package delays
-- Truck count scales automatically with math.ceil(packages / capacity) (not added yet)
+### Chromosome Encoding
 
-### v1.0 - WGU Submission
-- Initial submission with nearest neighbor routing
-- Custom hash table
-- Three-truck static loading
-- Colorama/tabulate CLI
+The GA represents a complete multi-truck routing solution as a single flat array. **Negative integers act as sentinels** — boundaries between truck routes. Positive integers are bundle IDs. Order within each segment is the delivery sequence for that truck.
+
+```
+[ 2,  5,  3, -1,  7,  1, -2,  4,  6 ]
+  ^--------^       ^-----^       ^---^
+   Truck 1          Truck 2      Truck 3
+ (bundles 2,5,3)  (bundles 7,1) (bundle 4,6)
+```
+
+This encoding lets a single crossover or mutation operator affect assignment (which truck gets a bundle) and sequencing (what order it delivers) in one operation.
+
+### Bundle Pre-Processing
+
+Before the GA runs, packages are grouped into **bundles** by delivery address. Each bundle is validated for constraint compatibility: a package with a `delay_time` of 9:30 AM cannot be bundled with a package that has a `deadline` of 9:00 AM. A 45-minute drive-time buffer is applied to prevent impossible groupings.
+
+Bundling reduces the GA's search space proportionally to the number of shared-address packages, improving convergence speed without sacrificing solution quality.
+
+---
+
+## Genetic Algorithm — Technical Details
+
+### Fitness Function
+
+Every chromosome is evaluated against five weighted objectives. Lower score is better.
+
+```python
+score = (
+    distance_score           +   # total fleet miles + return-to-hub
+    total_minutes_late * 10  +   # gradient penalty: 5min late ≠ 5hr late
+    num_late_packages  * 200 +   # per-package deadline violation
+    num_capacity_over  * 2000+   # packages over truck capacity
+    refrig_violations  * 2000    # refrigerated packages on wrong truck
+)
+```
+
+The `minutes_late × 10` gradient penalty is significant: it creates a smooth fitness landscape where the GA can distinguish between a route that's slightly late and one that's catastrophically late. Binary pass/fail penalties flatten the landscape and stall convergence.
+
+The fitness function also simulates the real route: departure time is set to the latest `delay_time` among a truck's bundles, and delivery times are computed at 18 mph. This means the GA is scoring actual simulated routes, not abstract proxies.
+
+### Selection
+
+K=3 tournament selection. Three chromosomes are sampled at random; the lowest-scoring one is selected as a parent. K=3 maintains selection pressure without eliminating population diversity the way top-N elitism alone would.
+
+### Crossover
+
+Sentinel-aware ordered crossover (OX):
+1. Sentinel positions are locked from **parent 1** — this preserves the truck structure (how many packages each truck carries)
+2. Package order is inherited from **parent 2** — this preserves delivery sequencing decisions
+
+This operator allows the GA to explore different delivery orderings without accidentally corrupting the truck boundary structure.
+
+### Mutation
+
+Four strategies, applied independently per chromosome:
+
+| Strategy | Rate | Purpose |
+|---|---|---|
+| Swap | `2× base_rate` | Standard package position exchange; runs most often |
+| Inversion | `base_rate` | Reverses a subsequence of packages; analogous to 2-opt |
+| Scramble | `adaptive` | Randomizes a 3–8 package window; scales with stagnation |
+| Sentinel shift | `0.5× base_rate` | Moves a truck boundary left or right by one position |
+
+The sentinel shift operator is specifically what prevents the population structure from fossilizing: without it, the initial capacity distribution from `create_population()` would be permanent.
+
+### Convergence Control
+
+- **Elitism:** Top 5 chromosomes are always copied into the next generation
+- **Adaptive mutation:** If the best score doesn't improve by more than 0.1% for 50 consecutive generations, `mutation_rate` doubles to "heat" the population and escape local optima. The threshold prevents the counter from resetting on marginal gains in flat fitness landscapes. It resets to the original value once a meaningful improvement is found
+- **Early termination:** If no improvement is seen for 500 generations, the GA exits and returns the current best. This enables an open-ended convergence mode: set `generations` to a very large number and let the algorithm run until it's done
+
+---
+
+## Performance Engineering
+
+The GA is a hot loop — fitness is evaluated for every chromosome in every generation. Bottlenecks compound rapidly at scale. The following issues were identified and resolved across versions:
+
+| Bottleneck | Root Cause | Resolution |
+|---|---|---|
+| All trucks departed at the latest possible `delay_time` | `Truck` objects maintained state across fitness evaluations — departure time from generation N carried into generation N+1 | State now initialized fresh at the start of each route evaluation in `fitness()` |
+| Sentinel comparisons were expensive | Original sentinel encoding used strings (`'|1|'`), requiring `isinstance(gene, str)` on every gene in every fitness call across thousands of generations | Replaced with integer sentinels (`-1`, `-2`, ...); checking `gene < 0` is the fastest comparison available in Python — meaningful savings at GA scale |
+| GA couldn't differentiate near-misses from hard failures | Binary deadline penalty treated a 1-minute miss and a 3-hour miss identically — flat fitness landscape stalls gradient-based evolution | Replaced with `minutes_late × 10` gradient penalty; fitness now reflects actual lateness severity |
+| Initial populations were mostly infeasible | Pure random seeding distributed bundles without regard for truck capacity, generating chromosomes the GA spent early generations just repairing | Capacity-aware seeding: bundles are distributed evenly across truck segments in `create_population()` |
+| GA wasted cycles on converged populations | No termination condition; algorithm always ran the full generation count even after convergence | Early return at 500 stagnant generations; adaptive mutation doubles at 50 to attempt escape first |
+
+---
+
+## Configurable Parameters
+
+All major parameters are surfaced through the CLI. No source changes required to run different scenarios.
+
+**Package generation:**
+| Parameter | Description |
+|---|---|
+| Package count | Total packages to generate for the run |
+| Deadline % | Fraction of packages with hard delivery deadlines |
+| Delay % | Fraction of packages not available at dispatch time |
+| Refrigeration % | Fraction of packages requiring refrigerated transport |
+
+**Truck configuration:**
+| Parameter | Description |
+|---|---|
+| Truck count | Number of trucks (default: `ceil(packages / capacity)`) |
+| Capacity | Per-truck package limit |
+| Refrigeration capability | Whether each truck can carry refrigerated packages |
+
+**GA hyperparameters:**
+| Parameter | Description |
+|---|---|
+| `pop_size` | Population size per generation |
+| `generations` | Maximum generations to run (use a large value for convergence mode) |
+| `mutation_rate` | Base mutation probability (adaptive logic scales from this) |
+
+**Post-run lookup:**
+After a GA run, the CLI supports package queries by ID or delivery address. Each query resolves the package's status (DELAYED / AT HUB / EN ROUTE / DELIVERED / LATE) at any user-specified timestamp — state is reconstructed from the simulation output, not re-run.
+
+---
+
+## Constraints Modeled
+
+- Delivery deadlines (gradient-penalized in fitness)
+- Package availability windows (`delay_time` — packages cannot be loaded before this time)
+- Refrigeration requirements (truck capability matching; hard penalty)
+- Per-truck capacity limits (hard penalty)
+- Return-to-hub cost (distance from final delivery back to depot is included in fitness)
+
+---
 
 ## Potential Improvements
-**Heuristic Seeding:** To improve population generation, 10% of the starting population could be initialized using a Nearest Neighbor algorithm instead of pure randomness.  The GA will be provided with a rational baseline immediately, allowing it to spend generations refining a good route rather than fixing a chaotic one.
 
-**Dynamic Hub Reassignment:** A mutation operator could be added to move a delayed bundle from one truck to another.  This will help trucks that may be bottlenecked by a single delayed bundle (in addition to bundle swapping).
+**Heuristic Seeding:** Initialize 10% of the starting population with chromosomes built by a nearest-neighbor algorithm. Provides the GA a rational baseline from generation zero rather than spending early generations correcting random chaos.
 
-**Physical Limit Audit:** An audit will be performed pre-GA to check if `delay_time + (distance_to_hub / speed) > deadline`.  This will automatically flag unsolvable packages, preventing the GA from wasting cycles on the impossible.
+**Dynamic Hub Reassignment:** Add a mutation operator that moves a delayed bundle between trucks. Helps when a single delayed bundle is bottlenecking a truck's departure time and no swap can resolve it.
 
-**Route Visualization:** A coordinate-based plot will be created to audit delivery paths and identify potential routing inefficiencies visually.
+**Physical Feasibility Audit:** Before the GA runs, flag packages where `delay_time + (distance_to_hub / speed) > deadline`. These are mathematically impossible to deliver on time — identifying them pre-run prevents the GA from wasting cycles optimizing around constraints it cannot satisfy.
+
+**Route Visualization:** Plot delivery coordinates to visually audit routing decisions and identify geographic inefficiencies.
+
+**PMX-Style Crossover:** The current ordered crossover always inherits sentinel positions (truck structure) from parent 1. A partially mapped crossover (PMX) variant could allow truck structure to be inherited from either parent, increasing structural diversity in the population.
+
+**Bundle Buffer as CLI Parameter:** The 45-minute compatibility buffer used during bundle pre-processing is currently hardcoded. Surfacing it as a CLI parameter would be consistent with the project's broader parameterization philosophy and allow tuning for different fleet speeds or depot distances.

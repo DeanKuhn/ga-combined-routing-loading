@@ -1,0 +1,16 @@
+[project]
+name = "c950"
+version = "0.1.0"
+description = "Genetic algorithm optimizer for the Vehicle Routing Problem with Time Windows"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.0",
+]
