@@ -21,7 +21,7 @@ Most implementations solve these in two separate passes. This GA solves both sim
 
 ```bash
 git clone <repo-url>
-cd c950
+cd ga-combined-routing-loading
 uv sync
 ```
 
