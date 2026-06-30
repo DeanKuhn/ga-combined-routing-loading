@@ -1,0 +1,512 @@
+{
+  "run_timestamp": "2026-06-30T22:48:59.332223+00:00",
+  "parameters": {
+    "packages": 17,
+    "trucks": 4,
+    "capacity": 8,
+    "refrig_trucks": 1,
+    "deadline_pct": 0.29,
+    "delay_pct": 0.18,
+    "refrig_pct": 0.18,
+    "pop_size": 150,
+    "generations": 500,
+    "mutation_rate": 0.05,
+    "seed": 20260630
+  },
+  "final_score": 54.69999999999999,
+  "convergence": [
+    {
+      "generation": 0,
+      "score": 2554.0666666666666,
+      "distance_score": 97.40000000000002,
+      "minutes_late": 5.666666666666667,
+      "late_count": 2
+    },
+    {
+      "generation": 10,
+      "score": 2075.6,
+      "distance_score": 75.6,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 20,
+      "score": 2070.5,
+      "distance_score": 70.50000000000001,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 30,
+      "score": 2066.1,
+      "distance_score": 66.10000000000001,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 40,
+      "score": 65.5,
+      "distance_score": 65.5,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 50,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 60,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 70,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 80,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 90,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 100,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 110,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 120,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 130,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 140,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 150,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 160,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 170,
+      "score": 61.3,
+      "distance_score": 61.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 180,
+      "score": 61.099999999999994,
+      "distance_score": 61.099999999999994,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 190,
+      "score": 60.10000000000001,
+      "distance_score": 60.10000000000001,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 200,
+      "score": 56.2,
+      "distance_score": 56.2,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 210,
+      "score": 56.199999999999996,
+      "distance_score": 56.199999999999996,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 220,
+      "score": 56.199999999999996,
+      "distance_score": 56.199999999999996,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 230,
+      "score": 56.199999999999996,
+      "distance_score": 56.199999999999996,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 240,
+      "score": 56.199999999999996,
+      "distance_score": 56.199999999999996,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 250,
+      "score": 56.199999999999996,
+      "distance_score": 56.199999999999996,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 260,
+      "score": 56.199999999999996,
+      "distance_score": 56.199999999999996,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 270,
+      "score": 54.699999999999996,
+      "distance_score": 54.699999999999996,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 280,
+      "score": 54.699999999999996,
+      "distance_score": 54.699999999999996,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 290,
+      "score": 54.699999999999996,
+      "distance_score": 54.699999999999996,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 300,
+      "score": 54.699999999999996,
+      "distance_score": 54.699999999999996,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 310,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 320,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 330,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 340,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 350,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 360,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 370,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 380,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 390,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 400,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 410,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 420,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 430,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 440,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 450,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 460,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 470,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 480,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 490,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 500,
+      "score": 54.69999999999999,
+      "distance_score": 54.69999999999999,
+      "minutes_late": 0,
+      "late_count": 0
+    }
+  ],
+  "routes": [
+    {
+      "truck_id": 1,
+      "stops": [
+        {
+          "package_ids": [
+            11
+          ],
+          "address": "450 E Vine St, Murray, UT 84107",
+          "arrival_time": "2000-01-01T08:05:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            8,
+            9
+          ],
+          "address": "1488 4800 S, Salt Lake City, UT 84123",
+          "arrival_time": "2000-01-01T08:07:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            10
+          ],
+          "address": "7200 S 1300 E, Midvale, UT 84047",
+          "arrival_time": "2000-01-01T08:17:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            4
+          ],
+          "address": "8200 S 300 W, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T08:25:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            13
+          ],
+          "address": "5400 W Daybreak Pkwy, South Jordan, UT 84095",
+          "arrival_time": "2000-01-01T08:46:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            5
+          ],
+          "address": "5500 S Redwood Rd, Taylorsville, UT 84123",
+          "arrival_time": "2000-01-01T09:11:20",
+          "status": "ON TIME"
+        }
+      ]
+    },
+    {
+      "truck_id": 2,
+      "stops": []
+    },
+    {
+      "truck_id": 3,
+      "stops": [
+        {
+          "package_ids": [
+            3,
+            16
+          ],
+          "address": "3365 S 900 W, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T08:07:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            14
+          ],
+          "address": "3148 S 1100 W, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T08:08:00",
+          "status": "ON TIME"
+        }
+      ]
+    },
+    {
+      "truck_id": 4,
+      "stops": [
+        {
+          "package_ids": [
+            0
+          ],
+          "address": "3640 S 700 W, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T08:05:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            12
+          ],
+          "address": "4100 S 4000 W, West Valley City, UT 84120",
+          "arrival_time": "2000-01-01T08:14:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            7
+          ],
+          "address": "3300 S 8400 W, Magna, UT 84044",
+          "arrival_time": "2000-01-01T08:29:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            15
+          ],
+          "address": "1900 W North Temple, Salt Lake City, UT 84116",
+          "arrival_time": "2000-01-01T08:56:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            1,
+            2
+          ],
+          "address": "300 State St, Salt Lake City, UT 84103",
+          "arrival_time": "2000-01-01T09:03:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            6
+          ],
+          "address": "195 W Oakland Ave, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T09:16:40",
+          "status": "N/A"
+        }
+      ]
+    }
+  ]
+}
