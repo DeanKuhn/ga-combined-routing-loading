@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "Genetic algorithm optimizer for the Vehicle Routing Problem with Time Windows"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "colorama>=0.4.6",
+]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]

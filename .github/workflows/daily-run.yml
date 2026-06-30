@@ -1,0 +1,74 @@
+name: Daily GA Run
+
+on:
+  schedule:
+    # 02:00 UTC — comfortably ahead of the website's 03:30 UTC nightly
+    # rebuild, leaving lead time for this run plus its commit/push.
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+jobs:
+  run-ga:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Compute randomized parameters
+        id: params
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import random
+          from datetime import datetime, timezone
+
+          # date-derived seed: reproducible per day, easy to debug a
+          # specific day's run by reusing the same --seed value
+          seed = int(datetime.now(timezone.utc).strftime('%Y%m%d'))
+          random.seed(seed)
+
+          packages = random.randint(12, 24)
+          deadline_pct = round(random.uniform(0.2, 0.4), 2)
+          delay_pct = round(random.uniform(0.05, 0.2), 2)
+          refrig_pct = round(random.uniform(0.05, 0.2), 2)
+
+          print(f"seed={seed}")
+          print(f"packages={packages}")
+          print(f"deadline_pct={deadline_pct}")
+          print(f"delay_pct={delay_pct}")
+          print(f"refrig_pct={refrig_pct}")
+          EOF
+
+      - name: Run GA
+        run: |
+          uv run main.py \
+            --packages ${{ steps.params.outputs.packages }} \
+            --trucks 4 \
+            --capacity 8 \
+            --deadline-pct ${{ steps.params.outputs.deadline_pct }} \
+            --delay-pct ${{ steps.params.outputs.delay_pct }} \
+            --refrig-pct ${{ steps.params.outputs.refrig_pct }} \
+            --pop-size 150 \
+            --generations 500 \
+            --mutation-rate 0.05 \
+            --seed ${{ steps.params.outputs.seed }} \
+            --output data/ga_results.json
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ga_results.json
+          git diff --staged --quiet || git commit -m "chore: daily GA run $(date -u +%Y-%m-%d)"
+          git pull --rebase
+          git push

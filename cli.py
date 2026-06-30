@@ -1,10 +1,12 @@
 from colorama import Fore, init
 import math
+import random
 from datetime import datetime
 
 from loaders import generate_packages, load_trucks
 from genetic_algorithm import genetic_algorithm, load_chromosome
 from simulation import run_simulation
+from export import export_results
 
 init(autoreset=True)
 
@@ -199,13 +201,65 @@ def run_ga(num_addresses, address_to_id, id_to_address, distance_matrix):
 
     print()
 
-    best_chromosome, bundles = genetic_algorithm(
+    best_chromosome, bundles, convergence_history = genetic_algorithm(
         packages, truck_num, trucks, capacity, address_to_id, distance_matrix,
         mutation_rate, pop_size, generations)
     load_chromosome(best_chromosome, bundles, packages, trucks)
 
     # run final simulation with best chromosome
     trucks = run_simulation(trucks, address_to_id, distance_matrix, capacity)
+    return packages, trucks, package_num
+
+def run_non_interactive(args, num_addresses, address_to_id, id_to_address,
+                         distance_matrix):
+    if args.seed is not None:
+        random.seed(args.seed)
+
+    package_num = args.packages
+    capacity = args.capacity
+    deadline_pct = args.deadline_pct
+    delay_pct = args.delay_pct
+    refrig_pct = args.refrig_pct
+    pop_size = args.pop_size
+    generations = args.generations
+    mutation_rate = args.mutation_rate
+
+    truck_num = args.trucks or math.ceil(float(package_num) / float(capacity))
+    refrig_truck_num = min(
+        math.ceil((float(package_num) * float(refrig_pct)) / float(capacity)),
+        truck_num)
+
+    packages = generate_packages(package_num, deadline_pct, delay_pct,
+                                 refrig_pct, id_to_address, num_addresses)
+    trucks = load_trucks(truck_num, refrig_truck_num, capacity)
+
+    best_chromosome, bundles, convergence_history = genetic_algorithm(
+        packages, truck_num, trucks, capacity, address_to_id, distance_matrix,
+        mutation_rate, pop_size, generations)
+    load_chromosome(best_chromosome, bundles, packages, trucks)
+
+    trucks = run_simulation(trucks, address_to_id, distance_matrix, capacity)
+
+    parameters = {
+        'packages': package_num,
+        'trucks': truck_num,
+        'capacity': capacity,
+        'refrig_trucks': refrig_truck_num,
+        'deadline_pct': deadline_pct,
+        'delay_pct': delay_pct,
+        'refrig_pct': refrig_pct,
+        'pop_size': pop_size,
+        'generations': generations,
+        'mutation_rate': mutation_rate,
+        'seed': args.seed,
+    }
+    final_score = convergence_history[-1]['score'] if convergence_history \
+        else None
+
+    export_results(trucks, parameters, final_score, convergence_history,
+                   args.output)
+    print(f'Wrote results to {args.output}')
+
     return packages, trucks, package_num
 
 def run_lookup(packages, trucks, package_num):

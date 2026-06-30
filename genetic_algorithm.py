@@ -89,7 +89,7 @@ def create_population(bundles, num_trucks, pop_size):
     return population
 
 def fitness(chromosome, trucks, capacity, bundles, address_to_id,
-            distance_matrix):
+            distance_matrix, detailed=False):
     distance_score = 0
     total_minutes_late = 0
     num_late_packages = 0
@@ -164,6 +164,9 @@ def fitness(chromosome, trucks, capacity, bundles, address_to_id,
              (num_late_packages * 200) +
              (num_capacity_over * 2000) +
              (refrig_violations * 2000))
+
+    if detailed:
+        return score, distance_score, total_minutes_late, num_late_packages
 
     return score
 
@@ -256,8 +259,22 @@ def mutate(chromosome, mutation_rate, stagnation_counter):
             chromosome[index], chromosome[new_index] = \
                 chromosome[new_index], chromosome[index]
 
+def record_convergence(convergence_history, generation, chromosome, trucks,
+                        capacity, bundles, address_to_id, distance_matrix):
+    score, distance_score, minutes_late, late_count = fitness(
+        chromosome, trucks, capacity, bundles, address_to_id,
+        distance_matrix, detailed=True)
+    convergence_history.append({
+        'generation': generation,
+        'score': score,
+        'distance_score': distance_score,
+        'minutes_late': minutes_late,
+        'late_count': late_count,
+    })
+
 def genetic_algorithm(packages, num_trucks, trucks, capacity,
-        address_to_id, distance_matrix, mutation_rate, pop_size, generations):
+        address_to_id, distance_matrix, mutation_rate, pop_size, generations,
+        convergence_sample_interval=10):
 
     # transform packages to bundles
     bundles = bundle_packages(packages)
@@ -270,6 +287,7 @@ def genetic_algorithm(packages, num_trucks, trucks, capacity,
     previous_best_score = float('inf')
     stagnation_counter = 0
     milestone_count = 0
+    convergence_history = []
 
     for generation in range(generations):
         # get the overall population fitness for each chromosome
@@ -280,6 +298,11 @@ def genetic_algorithm(packages, num_trucks, trucks, capacity,
         scored_pop.sort(key=lambda x: x[0])
         best_score = scored_pop[0][0]
         early_chromosome = scored_pop[0][1]
+
+        if generation % convergence_sample_interval == 0:
+            record_convergence(convergence_history, generation,
+                early_chromosome, trucks, capacity, bundles, address_to_id,
+                distance_matrix)
 
         # implement adaptive mutation rates
         # require >0.1% improvement to reset stagnation — prevents thrashing
@@ -297,9 +320,15 @@ def genetic_algorithm(packages, num_trucks, trucks, capacity,
 
         # early return
         if stagnation_counter > 500:
+            # always record the final generation, even off-interval, so the
+            # convergence curve doesn't cut off early
+            if convergence_history[-1]['generation'] != generation:
+                record_convergence(convergence_history, generation,
+                    early_chromosome, trucks, capacity, bundles,
+                    address_to_id, distance_matrix)
             print(f'Early return | Gen {generation} | ' \
                   f'Best Score = {best_score:.2f}')
-            return early_chromosome, bundles
+            return early_chromosome, bundles, convergence_history
 
         # progress update
         ten_percent_num = generations / 10
@@ -339,7 +368,14 @@ def genetic_algorithm(packages, num_trucks, trucks, capacity,
     print(f'10 / 10 | Final Gen | Best Score = {scored_pop[0][0]:.2f}')
     best_chromosome = scored_pop[0][1]
 
-    return best_chromosome, bundles
+    # always record the final generation, even off-interval, so the
+    # convergence curve doesn't cut off early
+    if not convergence_history or \
+            convergence_history[-1]['generation'] != generations:
+        record_convergence(convergence_history, generations, best_chromosome,
+            trucks, capacity, bundles, address_to_id, distance_matrix)
+
+    return best_chromosome, bundles, convergence_history
 
 # creates package arrays for each truck
 def load_chromosome(best_chromosome, bundles, packages, trucks):
