@@ -1,374 +1,1704 @@
 {
-  "run_timestamp": "2026-07-01T06:17:29.525440+00:00",
+  "run_timestamp": "2026-07-01T16:16:38.131023+00:00",
   "parameters": {
-    "packages": 16,
-    "trucks": 4,
-    "capacity": 8,
+    "packages": 166,
+    "trucks": 12,
+    "capacity": 16,
     "refrig_trucks": 1,
     "deadline_pct": 0.32,
     "delay_pct": 0.18,
     "refrig_pct": 0.07,
-    "pop_size": 150,
-    "generations": 500,
+    "pop_size": 320,
+    "generations": 8000,
     "mutation_rate": 0.05,
     "seed": 20260701
   },
-  "final_score": 59.5,
+  "final_score": 10221.1,
   "convergence": [
     {
       "generation": 0,
-      "score": 86.79999999999998,
-      "distance_score": 86.79999999999998,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 52856.6,
+      "distance_score": 496.59999999999997,
+      "minutes_late": 475.99999999999994,
+      "late_count": 18
     },
     {
       "generation": 10,
-      "score": 72.19999999999999,
-      "distance_score": 72.19999999999999,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 38664.833333333336,
+      "distance_score": 521.5,
+      "minutes_late": 634.3333333333334,
+      "late_count": 19
     },
     {
       "generation": 20,
-      "score": 70.2,
-      "distance_score": 70.2,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 31956.833333333332,
+      "distance_score": 503.49999999999994,
+      "minutes_late": 365.3333333333333,
+      "late_count": 19
     },
     {
       "generation": 30,
-      "score": 69.39999999999999,
-      "distance_score": 69.39999999999999,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 26180.8,
+      "distance_score": 510.7999999999999,
+      "minutes_late": 567.0,
+      "late_count": 30
     },
     {
       "generation": 40,
-      "score": 65.8,
-      "distance_score": 65.8,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 20584.9,
+      "distance_score": 514.8999999999999,
+      "minutes_late": 347.0,
+      "late_count": 23
     },
     {
       "generation": 50,
-      "score": 63.800000000000004,
-      "distance_score": 63.800000000000004,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 17278.0,
+      "distance_score": 507.9999999999999,
+      "minutes_late": 217.00000000000003,
+      "late_count": 13
     },
     {
       "generation": 60,
-      "score": 63.800000000000004,
-      "distance_score": 63.800000000000004,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 15672.6,
+      "distance_score": 512.5999999999999,
+      "minutes_late": 176.0,
+      "late_count": 7
     },
     {
       "generation": 70,
-      "score": 63.800000000000004,
-      "distance_score": 63.800000000000004,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 14997.866666666667,
+      "distance_score": 491.19999999999993,
+      "minutes_late": 90.66666666666667,
+      "late_count": 8
     },
     {
       "generation": 80,
-      "score": 63.60000000000001,
-      "distance_score": 63.60000000000001,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 14378.066666666666,
+      "distance_score": 491.39999999999986,
+      "minutes_late": 68.66666666666667,
+      "late_count": 6
     },
     {
       "generation": 90,
-      "score": 63.60000000000001,
-      "distance_score": 63.60000000000001,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 13353.066666666666,
+      "distance_score": 476.3999999999999,
+      "minutes_late": 47.666666666666664,
+      "late_count": 2
     },
     {
       "generation": 100,
-      "score": 63.6,
-      "distance_score": 63.6,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 13303.733333333334,
+      "distance_score": 470.3999999999999,
+      "minutes_late": 43.333333333333336,
+      "late_count": 2
     },
     {
       "generation": 110,
-      "score": 63.6,
-      "distance_score": 63.6,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 11407.333333333334,
+      "distance_score": 444.0000000000001,
+      "minutes_late": 56.333333333333336,
+      "late_count": 2
     },
     {
       "generation": 120,
-      "score": 63.6,
-      "distance_score": 63.6,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 11385.733333333334,
+      "distance_score": 422.4000000000001,
+      "minutes_late": 56.333333333333336,
+      "late_count": 2
     },
     {
       "generation": 130,
-      "score": 63.6,
-      "distance_score": 63.6,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 11365.9,
+      "distance_score": 415.9000000000001,
+      "minutes_late": 55.0,
+      "late_count": 2
     },
     {
       "generation": 140,
-      "score": 63.6,
-      "distance_score": 63.6,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 11316.733333333334,
+      "distance_score": 403.4000000000001,
+      "minutes_late": 51.333333333333336,
+      "late_count": 2
     },
     {
       "generation": 150,
-      "score": 63.6,
-      "distance_score": 63.6,
-      "minutes_late": 0,
-      "late_count": 0
+      "score": 11235.133333333333,
+      "distance_score": 401.8000000000001,
+      "minutes_late": 43.333333333333336,
+      "late_count": 2
     },
     {
       "generation": 160,
-      "score": 63.6,
-      "distance_score": 63.6,
+      "score": 10397.4,
+      "distance_score": 397.40000000000015,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 170,
-      "score": 63.6,
-      "distance_score": 63.6,
+      "score": 10382.2,
+      "distance_score": 382.2000000000001,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 180,
-      "score": 63.6,
-      "distance_score": 63.6,
+      "score": 10362.4,
+      "distance_score": 362.40000000000015,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 190,
-      "score": 61.900000000000006,
-      "distance_score": 61.900000000000006,
+      "score": 10354.5,
+      "distance_score": 354.50000000000017,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 200,
-      "score": 61.7,
-      "distance_score": 61.7,
+      "score": 10346.3,
+      "distance_score": 346.30000000000007,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 210,
-      "score": 61.400000000000006,
-      "distance_score": 61.400000000000006,
+      "score": 10335.2,
+      "distance_score": 335.20000000000005,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 220,
-      "score": 60.400000000000006,
-      "distance_score": 60.400000000000006,
+      "score": 10328.8,
+      "distance_score": 328.80000000000007,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 230,
-      "score": 59.7,
-      "distance_score": 59.7,
+      "score": 10317.8,
+      "distance_score": 317.80000000000007,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 240,
-      "score": 59.7,
-      "distance_score": 59.7,
+      "score": 10315.6,
+      "distance_score": 315.60000000000014,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 250,
-      "score": 59.7,
-      "distance_score": 59.7,
+      "score": 10313.3,
+      "distance_score": 313.3000000000001,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 260,
-      "score": 59.7,
-      "distance_score": 59.7,
+      "score": 10309.2,
+      "distance_score": 309.20000000000016,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 270,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10304.4,
+      "distance_score": 304.4000000000001,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 280,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10295.8,
+      "distance_score": 295.80000000000007,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 290,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10293.6,
+      "distance_score": 293.6000000000001,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 300,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10289.0,
+      "distance_score": 289.00000000000006,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 310,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10284.5,
+      "distance_score": 284.5000000000001,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 320,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10283.8,
+      "distance_score": 283.80000000000007,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 330,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10279.0,
+      "distance_score": 279.00000000000006,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 340,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10276.1,
+      "distance_score": 276.1,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 350,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10272.6,
+      "distance_score": 272.6,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 360,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10270.5,
+      "distance_score": 270.50000000000006,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 370,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10269.1,
+      "distance_score": 269.1,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 380,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10268.7,
+      "distance_score": 268.7,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 390,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10266.6,
+      "distance_score": 266.59999999999997,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 400,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10266.6,
+      "distance_score": 266.59999999999997,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 410,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10265.3,
+      "distance_score": 265.3,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 420,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10262.3,
+      "distance_score": 262.3,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 430,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10259.4,
+      "distance_score": 259.40000000000003,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 440,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10256.4,
+      "distance_score": 256.4,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 450,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10255.2,
+      "distance_score": 255.20000000000005,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 460,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10249.7,
+      "distance_score": 249.70000000000002,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 470,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10249.4,
+      "distance_score": 249.4,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 480,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10246.4,
+      "distance_score": 246.39999999999998,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 490,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10245.6,
+      "distance_score": 245.6,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 500,
-      "score": 59.5,
-      "distance_score": 59.5,
+      "score": 10243.0,
+      "distance_score": 243.0,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 510,
+      "score": 10243.0,
+      "distance_score": 243.0,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 520,
+      "score": 10243.0,
+      "distance_score": 243.0,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 530,
+      "score": 10243.0,
+      "distance_score": 243.0,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 540,
+      "score": 10242.7,
+      "distance_score": 242.7,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 550,
+      "score": 10242.2,
+      "distance_score": 242.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 560,
+      "score": 10242.1,
+      "distance_score": 242.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 570,
+      "score": 10241.9,
+      "distance_score": 241.9,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 580,
+      "score": 10241.9,
+      "distance_score": 241.9,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 590,
+      "score": 10241.8,
+      "distance_score": 241.8,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 600,
+      "score": 10241.8,
+      "distance_score": 241.8,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 610,
+      "score": 10241.8,
+      "distance_score": 241.8,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 620,
+      "score": 10241.5,
+      "distance_score": 241.5,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 630,
+      "score": 10241.0,
+      "distance_score": 241.00000000000003,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 640,
+      "score": 10241.0,
+      "distance_score": 241.00000000000003,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 650,
+      "score": 10238.8,
+      "distance_score": 238.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 660,
+      "score": 10238.8,
+      "distance_score": 238.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 670,
+      "score": 10236.0,
+      "distance_score": 235.99999999999997,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 680,
+      "score": 10234.8,
+      "distance_score": 234.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 690,
+      "score": 10233.5,
+      "distance_score": 233.49999999999997,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 700,
+      "score": 10233.0,
+      "distance_score": 233.0,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 710,
+      "score": 10232.8,
+      "distance_score": 232.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 720,
+      "score": 10232.5,
+      "distance_score": 232.50000000000006,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 730,
+      "score": 10231.2,
+      "distance_score": 231.20000000000005,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 740,
+      "score": 10231.2,
+      "distance_score": 231.20000000000005,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 750,
+      "score": 10226.2,
+      "distance_score": 226.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 760,
+      "score": 10226.2,
+      "distance_score": 226.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 770,
+      "score": 10225.9,
+      "distance_score": 225.90000000000003,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 780,
+      "score": 10225.9,
+      "distance_score": 225.90000000000003,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 790,
+      "score": 10225.4,
+      "distance_score": 225.40000000000006,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 800,
+      "score": 10225.4,
+      "distance_score": 225.40000000000006,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 810,
+      "score": 10225.4,
+      "distance_score": 225.40000000000006,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 820,
+      "score": 10225.3,
+      "distance_score": 225.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 830,
+      "score": 10225.3,
+      "distance_score": 225.3,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 840,
+      "score": 10224.1,
+      "distance_score": 224.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 850,
+      "score": 10224.1,
+      "distance_score": 224.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 860,
+      "score": 10224.1,
+      "distance_score": 224.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 870,
+      "score": 10224.1,
+      "distance_score": 224.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 880,
+      "score": 10224.1,
+      "distance_score": 224.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 890,
+      "score": 10224.1,
+      "distance_score": 224.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 900,
+      "score": 10223.8,
+      "distance_score": 223.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 910,
+      "score": 10223.8,
+      "distance_score": 223.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 920,
+      "score": 10223.8,
+      "distance_score": 223.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 930,
+      "score": 10223.7,
+      "distance_score": 223.7,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 940,
+      "score": 10223.7,
+      "distance_score": 223.7,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 950,
+      "score": 10223.7,
+      "distance_score": 223.7,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 960,
+      "score": 10223.7,
+      "distance_score": 223.7,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 970,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 980,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 990,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1000,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1010,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1020,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1030,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1040,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1050,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1060,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1070,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1080,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1090,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1100,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1110,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1120,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1130,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1140,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1150,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1160,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1170,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1180,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1190,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1200,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1210,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1220,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1230,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1240,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1250,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1260,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1270,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1280,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1290,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1300,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1310,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1320,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1330,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1340,
+      "score": 10223.2,
+      "distance_score": 223.20000000000002,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1350,
+      "score": 10223.0,
+      "distance_score": 223.0,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1360,
+      "score": 10223.0,
+      "distance_score": 223.0,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1370,
+      "score": 10223.0,
+      "distance_score": 223.0,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1380,
+      "score": 10223.0,
+      "distance_score": 223.0,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1390,
+      "score": 10223.0,
+      "distance_score": 223.0,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1400,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1410,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1420,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1430,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1440,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1450,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1460,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1470,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1480,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1490,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1500,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1510,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1520,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1530,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1540,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1550,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1560,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1570,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1580,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1590,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1600,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1610,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1620,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1630,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1640,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1650,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1660,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1670,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1680,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1690,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1700,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1710,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1720,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1730,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1740,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1750,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1760,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1770,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1780,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1790,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1800,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1810,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1820,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1830,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1840,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1850,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1860,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1870,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1880,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1890,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1900,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1910,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1920,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1930,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1940,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1950,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1960,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1970,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1980,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 1990,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2000,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2010,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2020,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2030,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2040,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2050,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2060,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2070,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2080,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2090,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2100,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2110,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2120,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2130,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2140,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2150,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2160,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2170,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2180,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2190,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2200,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2210,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2220,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2230,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2240,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2250,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2260,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2270,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2280,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2290,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2300,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2310,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2320,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2330,
+      "score": 10221.8,
+      "distance_score": 221.79999999999998,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2340,
+      "score": 10221.1,
+      "distance_score": 221.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2350,
+      "score": 10221.1,
+      "distance_score": 221.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2360,
+      "score": 10221.1,
+      "distance_score": 221.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2370,
+      "score": 10221.1,
+      "distance_score": 221.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2380,
+      "score": 10221.1,
+      "distance_score": 221.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2390,
+      "score": 10221.1,
+      "distance_score": 221.1,
+      "minutes_late": 0,
+      "late_count": 0
+    },
+    {
+      "generation": 2396,
+      "score": 10221.1,
+      "distance_score": 221.1,
       "minutes_late": 0,
       "late_count": 0
     }
@@ -379,35 +1709,61 @@
       "stops": [
         {
           "package_ids": [
-            11
+            71,
+            58,
+            115,
+            144
+          ],
+          "address": "1330 2100 S, Salt Lake City, UT 84106",
+          "arrival_time": "2000-01-01T08:35:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            163,
+            133
+          ],
+          "address": "195 W Oakland Ave, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T08:39:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            59,
+            152
+          ],
+          "address": "1900 W North Temple, Salt Lake City, UT 84116",
+          "arrival_time": "2000-01-01T08:51:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            123,
+            85
+          ],
+          "address": "4550 W 5400 S, Kearns, UT 84118",
+          "arrival_time": "2000-01-01T09:22:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            99,
+            113,
+            10,
+            21
+          ],
+          "address": "7800 S State St, Midvale, UT 84047",
+          "arrival_time": "2000-01-01T09:37:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            11,
+            124
           ],
           "address": "4600 S West Temple, Murray, UT 84107",
-          "arrival_time": "2000-01-01T08:35:40",
+          "arrival_time": "2000-01-01T09:51:00",
           "status": "N/A"
-        },
-        {
-          "package_ids": [
-            5
-          ],
-          "address": "230 W 5300 S, Murray, UT 84107",
-          "arrival_time": "2000-01-01T08:39:20",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            8
-          ],
-          "address": "450 E Vine St, Murray, UT 84107",
-          "arrival_time": "2000-01-01T08:44:00",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            9
-          ],
-          "address": "4400 S 700 E, Salt Lake City, UT 84107",
-          "arrival_time": "2000-01-01T08:46:40",
-          "status": "ON TIME"
         }
       ]
     },
@@ -416,83 +1772,608 @@
       "stops": [
         {
           "package_ids": [
-            4
+            20,
+            76,
+            8,
+            66,
+            86
           ],
-          "address": "2835 Main St, Salt Lake City, UT 84115",
-          "arrival_time": "2000-01-01T09:33:40",
+          "address": "450 E Vine St, Murray, UT 84107",
+          "arrival_time": "2000-01-01T09:35:20",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            1
+            60
           ],
-          "address": "3060 Lester St, West Valley City, UT 84119",
-          "arrival_time": "2000-01-01T09:41:40",
+          "address": "5025 State St, Murray, UT 84107",
+          "arrival_time": "2000-01-01T09:37:00",
           "status": "N/A"
         },
         {
           "package_ids": [
-            12
+            162,
+            53
           ],
-          "address": "2300 Parkway Blvd, West Valley City, UT 84119",
-          "arrival_time": "2000-01-01T09:43:40",
+          "address": "6100 W 3500 S, West Valley City, UT 84128",
+          "arrival_time": "2000-01-01T09:58:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            107,
+            120
+          ],
+          "address": "4800 W Magna Main St, Magna, UT 84044",
+          "arrival_time": "2000-01-01T10:03:40",
           "status": "N/A"
         },
         {
           "package_ids": [
+            69,
             3
           ],
           "address": "3300 S 8400 W, Magna, UT 84044",
-          "arrival_time": "2000-01-01T10:01:00",
-          "status": "N/A"
+          "arrival_time": "2000-01-01T10:06:20",
+          "status": "ON TIME"
         },
         {
           "package_ids": [
-            7
+            49,
+            83,
+            112,
+            117
           ],
-          "address": "2010 W 500 S, Salt Lake City, UT 84104",
-          "arrival_time": "2000-01-01T10:23:20",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            14
-          ],
-          "address": "670 S 700 E, Salt Lake City, UT 84102",
-          "arrival_time": "2000-01-01T10:35:00",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            15
-          ],
-          "address": "3120 S Highland Dr, Salt Lake City, UT 84106",
-          "arrival_time": "2000-01-01T10:44:20",
+          "address": "3640 S 700 W, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T10:30:00",
           "status": "N/A"
         }
       ]
     },
     {
       "truck_id": 3,
-      "stops": []
+      "stops": [
+        {
+          "package_ids": [
+            134
+          ],
+          "address": "5100 South 2700 West, Salt Lake City, UT 84118",
+          "arrival_time": "2000-01-01T08:43:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            105,
+            132,
+            165,
+            125
+          ],
+          "address": "4820 S 4000 W, West Valley City, UT 84120",
+          "arrival_time": "2000-01-01T08:46:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            110,
+            91,
+            101
+          ],
+          "address": "5200 S 4400 W, Kearns, UT 84118",
+          "arrival_time": "2000-01-01T08:52:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            100,
+            151
+          ],
+          "address": "6700 S 4000 W, West Jordan, UT 84084",
+          "arrival_time": "2000-01-01T08:56:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            0,
+            32,
+            157
+          ],
+          "address": "5500 S Redwood Rd, Taylorsville, UT 84123",
+          "arrival_time": "2000-01-01T09:05:40",
+          "status": "N/A"
+        }
+      ]
     },
     {
       "truck_id": 4,
       "stops": [
         {
           "package_ids": [
-            6
+            119
           ],
-          "address": "2600 Taylorsville Blvd, Salt Lake City, UT 84118",
-          "arrival_time": "2000-01-01T08:11:40",
+          "address": "2530 S 500 E, Salt Lake City, UT 84106",
+          "arrival_time": "2000-01-01T09:35:00",
           "status": "N/A"
         },
         {
           "package_ids": [
-            2
+            15,
+            46,
+            139
+          ],
+          "address": "3120 S Highland Dr, Salt Lake City, UT 84106",
+          "arrival_time": "2000-01-01T09:36:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            37,
+            57,
+            150
+          ],
+          "address": "750 W 900 S, Salt Lake City, UT 84104",
+          "arrival_time": "2000-01-01T09:45:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            39,
+            7,
+            67,
+            81,
+            160
+          ],
+          "address": "2010 W 500 S, Salt Lake City, UT 84104",
+          "arrival_time": "2000-01-01T09:53:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            27,
+            102,
+            156
+          ],
+          "address": "2600 S 600 W, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T09:57:40",
+          "status": "ON TIME"
+        }
+      ]
+    },
+    {
+      "truck_id": 5,
+      "stops": [
+        {
+          "package_ids": [
+            158
+          ],
+          "address": "7200 S 1300 E, Midvale, UT 84047",
+          "arrival_time": "2000-01-01T08:46:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            28
+          ],
+          "address": "8000 S 700 E, Sandy, UT 84070",
+          "arrival_time": "2000-01-01T08:51:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            143,
+            127
+          ],
+          "address": "9200 S 300 W, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T08:59:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            95,
+            129
+          ],
+          "address": "8200 S 300 W, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T09:03:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            62,
+            146
+          ],
+          "address": "7100 S 300 W, Midvale, UT 84047",
+          "arrival_time": "2000-01-01T09:07:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            19
+          ],
+          "address": "6400 S 300 W, Murray, UT 84107",
+          "arrival_time": "2000-01-01T09:10:00",
+          "status": "N/A"
+        }
+      ]
+    },
+    {
+      "truck_id": 6,
+      "stops": [
+        {
+          "package_ids": [
+            109,
+            98
+          ],
+          "address": "3900 S Wasatch Blvd, Salt Lake City, UT 84124",
+          "arrival_time": "2000-01-01T08:39:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            70,
+            104,
+            135
+          ],
+          "address": "3800 S West Temple, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T08:50:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            36,
+            88,
+            1
+          ],
+          "address": "3060 Lester St, West Valley City, UT 84119",
+          "arrival_time": "2000-01-01T08:57:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            56
+          ],
+          "address": "3200 W 3100 S, West Valley City, UT 84119",
+          "arrival_time": "2000-01-01T08:59:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            64,
+            122
+          ],
+          "address": "3148 S 1100 W, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T09:03:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            22,
+            80
+          ],
+          "address": "380 W 2880 S, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T09:05:40",
+          "status": "N/A"
+        }
+      ]
+    },
+    {
+      "truck_id": 7,
+      "stops": [
+        {
+          "package_ids": [
+            33
+          ],
+          "address": "1060 Dalton Ave S, Salt Lake City, UT 84104",
+          "arrival_time": "2000-01-01T09:39:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            159,
+            30,
+            34,
+            38,
+            103,
+            108,
+            147
+          ],
+          "address": "1390 S 2200 W, Salt Lake City, UT 84104",
+          "arrival_time": "2000-01-01T09:41:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            92
+          ],
+          "address": "8400 S 1300 W, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T10:11:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            2,
+            154
           ],
           "address": "5400 W Daybreak Pkwy, South Jordan, UT 84095",
-          "arrival_time": "2000-01-01T08:37:20",
+          "arrival_time": "2000-01-01T10:25:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            128,
+            63
+          ],
+          "address": "11400 S District Dr, South Jordan, UT 84095",
+          "arrival_time": "2000-01-01T10:40:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            153
+          ],
+          "address": "11400 S Lone Peak Pkwy, Draper, UT 84020",
+          "arrival_time": "2000-01-01T10:50:00",
+          "status": "N/A"
+        }
+      ]
+    },
+    {
+      "truck_id": 8,
+      "stops": [
+        {
+          "package_ids": [
+            9
+          ],
+          "address": "4400 S 700 E, Salt Lake City, UT 84107",
+          "arrival_time": "2000-01-01T08:33:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            40,
+            140
+          ],
+          "address": "1488 4800 S, Salt Lake City, UT 84123",
+          "arrival_time": "2000-01-01T08:38:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            114,
+            136
+          ],
+          "address": "6200 S State St, Murray, UT 84107",
+          "arrival_time": "2000-01-01T08:42:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            141,
+            48,
+            54
+          ],
+          "address": "5600 S 300 W, Murray, UT 84107",
+          "arrival_time": "2000-01-01T08:45:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            82,
+            111,
+            84,
+            94
+          ],
+          "address": "3575 W Valley Central Station bus Loop, West Valley City, UT 84119",
+          "arrival_time": "2000-01-01T09:00:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            12,
+            72
+          ],
+          "address": "2300 Parkway Blvd, West Valley City, UT 84119",
+          "arrival_time": "2000-01-01T09:02:20",
+          "status": "N/A"
+        }
+      ]
+    },
+    {
+      "truck_id": 9,
+      "stops": [
+        {
+          "package_ids": [
+            5
+          ],
+          "address": "230 W 5300 S, Murray, UT 84107",
+          "arrival_time": "2000-01-01T09:39:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            77
+          ],
+          "address": "1200 W 7800 S, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T09:49:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            35,
+            161
+          ],
+          "address": "7400 S Redwood Rd, West Jordan, UT 84084",
+          "arrival_time": "2000-01-01T09:53:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            6,
+            25,
+            31,
+            68,
+            75,
+            137
+          ],
+          "address": "2600 Taylorsville Blvd, Salt Lake City, UT 84118",
+          "arrival_time": "2000-01-01T10:02:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            41
+          ],
+          "address": "1700 W 4700 S, Taylorsville, UT 84123",
+          "arrival_time": "2000-01-01T10:06:00",
+          "status": "N/A"
+        }
+      ]
+    },
+    {
+      "truck_id": 10,
+      "stops": [
+        {
+          "package_ids": [
+            4,
+            45
+          ],
+          "address": "2835 Main St, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T08:03:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            90,
+            26,
+            61
+          ],
+          "address": "2920 S Main St, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T08:04:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            24,
+            29,
+            52
+          ],
+          "address": "300 State St, Salt Lake City, UT 84103",
+          "arrival_time": "2000-01-01T08:20:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            96
+          ],
+          "address": "233 Canyon Rd, Salt Lake City, UT 84103",
+          "arrival_time": "2000-01-01T08:22:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            148,
+            14,
+            47
+          ],
+          "address": "670 S 700 E, Salt Lake City, UT 84102",
+          "arrival_time": "2000-01-01T08:28:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            43
+          ],
+          "address": "600 E 900 South, Salt Lake City, UT 84105",
+          "arrival_time": "2000-01-01T08:30:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            65,
+            121
+          ],
+          "address": "790 E 2100 S, Salt Lake City, UT 84106",
+          "arrival_time": "2000-01-01T08:37:00",
+          "status": "N/A"
+        }
+      ]
+    },
+    {
+      "truck_id": 11,
+      "stops": [
+        {
+          "package_ids": [
+            16,
+            130
+          ],
+          "address": "2900 W 2100 S, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T08:41:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            116,
+            42,
+            89,
+            97
+          ],
+          "address": "1300 N 5600 W, Salt Lake City, UT 84116",
+          "arrival_time": "2000-01-01T08:58:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            73,
+            44,
+            164
+          ],
+          "address": "2100 N Redwood Rd, Salt Lake City, UT 84116",
+          "arrival_time": "2000-01-01T09:07:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            118,
+            79,
+            106
+          ],
+          "address": "1480 N 2200 W, Salt Lake City, UT 84116",
+          "arrival_time": "2000-01-01T09:08:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            74
+          ],
+          "address": "500 S 400 W, Salt Lake City, UT 84101",
+          "arrival_time": "2000-01-01T09:15:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            55
+          ],
+          "address": "1710 S Redwood Rd, Salt Lake City, UT 84104",
+          "arrival_time": "2000-01-01T09:24:20",
+          "status": "N/A"
+        }
+      ]
+    },
+    {
+      "truck_id": 12,
+      "stops": [
+        {
+          "package_ids": [
+            149
+          ],
+          "address": "4580 S 2300 E, Holladay, UT 84117",
+          "arrival_time": "2000-01-01T08:12:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            142
+          ],
+          "address": "9400 S 700 E, Sandy, UT 84070",
+          "arrival_time": "2000-01-01T08:35:00",
           "status": "N/A"
         },
         {
@@ -500,23 +2381,62 @@
             13
           ],
           "address": "10200 S 1300 E, Sandy, UT 84092",
-          "arrival_time": "2000-01-01T09:02:40",
+          "arrival_time": "2000-01-01T08:39:00",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            10
+            18,
+            131
           ],
-          "address": "7800 S State St, Midvale, UT 84047",
-          "arrival_time": "2000-01-01T09:17:00",
+          "address": "10600 S Sego Lily Dr, Sandy, UT 84094",
+          "arrival_time": "2000-01-01T08:41:20",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            0
+            23,
+            17,
+            93
           ],
-          "address": "5500 S Redwood Rd, Taylorsville, UT 84123",
-          "arrival_time": "2000-01-01T09:27:20",
+          "address": "12600 S 900 E, Draper, UT 84020",
+          "arrival_time": "2000-01-01T08:49:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            78,
+            50,
+            138,
+            145
+          ],
+          "address": "13200 S Minuteman Dr, Draper, UT 84020",
+          "arrival_time": "2000-01-01T08:52:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            87,
+            51
+          ],
+          "address": "11800 S River Heights Dr, South Jordan, UT 84095",
+          "arrival_time": "2000-01-01T08:59:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            126
+          ],
+          "address": "9800 S Redwood Rd, South Jordan, UT 84095",
+          "arrival_time": "2000-01-01T09:08:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            155
+          ],
+          "address": "3600 W 9000 S, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T09:14:20",
           "status": "N/A"
         }
       ]
