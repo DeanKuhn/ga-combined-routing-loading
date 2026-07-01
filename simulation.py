@@ -56,4 +56,10 @@ def run_simulation(trucks, address_to_id, distance_matrix, capacity):
     print(f'Total Refrigeration Violations: {refrig_violations}')
     print(f'Total Capacity Violations: {capacity_violations}')
 
-    return trucks
+    summary = {
+        'total_fleet_mileage': total_fleet_mileage,
+        'deadline_violations': deadline_violations,
+        'refrig_violations': refrig_violations,
+        'capacity_violations': capacity_violations,
+    }
+    return trucks, summary

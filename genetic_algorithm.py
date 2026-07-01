@@ -274,7 +274,7 @@ def record_convergence(convergence_history, generation, chromosome, trucks,
 
 def genetic_algorithm(packages, num_trucks, trucks, capacity,
         address_to_id, distance_matrix, mutation_rate, pop_size, generations,
-        convergence_sample_interval=10):
+        convergence_sample_interval=50):
 
     # transform packages to bundles
     bundles = bundle_packages(packages)

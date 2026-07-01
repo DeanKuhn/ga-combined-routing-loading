@@ -41,11 +41,12 @@ def build_routes(trucks):
     return routes
 
 def export_results(trucks, parameters, final_score, convergence_history,
-                    output_path):
+                    summary, output_path):
     results = {
         'run_timestamp': datetime.now(timezone.utc).isoformat(),
         'parameters': parameters,
         'final_score': final_score,
+        'summary': summary,
         'convergence': convergence_history,
         'routes': build_routes(trucks),
     }
