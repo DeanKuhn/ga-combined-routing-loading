@@ -319,7 +319,7 @@ def genetic_algorithm(packages, num_trucks, trucks, capacity,
             mutation_rate = min(0.25, mutation_rate * 2)
 
         # early return
-        if stagnation_counter > 500:
+        if stagnation_counter > 1000:
             # always record the final generation, even off-interval, so the
             # convergence curve doesn't cut off early
             if convergence_history[-1]['generation'] != generation:

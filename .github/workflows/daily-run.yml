@@ -10,6 +10,7 @@ on:
 jobs:
   run-ga:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write
 
@@ -29,6 +30,7 @@ jobs:
         id: params
         run: |
           python3 - <<'EOF' >> "$GITHUB_OUTPUT"
+          import math
           import random
           from datetime import datetime, timezone
 
@@ -37,29 +39,37 @@ jobs:
           seed = int(datetime.now(timezone.utc).strftime('%Y%m%d'))
           random.seed(seed)
 
-          packages = random.randint(12, 24)
+          packages = random.randint(100, 250)
           deadline_pct = round(random.uniform(0.2, 0.4), 2)
           delay_pct = round(random.uniform(0.05, 0.2), 2)
           refrig_pct = round(random.uniform(0.05, 0.2), 2)
+
+          # +1 truck of buffer beyond the bare minimum so the GA has room
+          # to balance loads instead of being forced into capacity
+          # violations by a razor-thin fleet size
+          capacity = 16
+          trucks = math.ceil(packages / capacity) + 1
 
           print(f"seed={seed}")
           print(f"packages={packages}")
           print(f"deadline_pct={deadline_pct}")
           print(f"delay_pct={delay_pct}")
           print(f"refrig_pct={refrig_pct}")
+          print(f"capacity={capacity}")
+          print(f"trucks={trucks}")
           EOF
 
       - name: Run GA
         run: |
           uv run main.py \
             --packages ${{ steps.params.outputs.packages }} \
-            --trucks 4 \
-            --capacity 8 \
+            --trucks ${{ steps.params.outputs.trucks }} \
+            --capacity ${{ steps.params.outputs.capacity }} \
             --deadline-pct ${{ steps.params.outputs.deadline_pct }} \
             --delay-pct ${{ steps.params.outputs.delay_pct }} \
             --refrig-pct ${{ steps.params.outputs.refrig_pct }} \
-            --pop-size 150 \
-            --generations 500 \
+            --pop-size 320 \
+            --generations 8000 \
             --mutation-rate 0.05 \
             --seed ${{ steps.params.outputs.seed }} \
             --output data/ga_results.json
