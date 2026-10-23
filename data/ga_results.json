@@ -1,261 +1,233 @@
 {
-  "run_timestamp": "2026-10-22T06:50:44.250120+00:00",
+  "run_timestamp": "2026-10-23T06:44:53.826509+00:00",
   "parameters": {
-    "packages": 237,
-    "trucks": 13,
+    "packages": 182,
+    "trucks": 11,
     "capacity": 20,
     "refrig_trucks": 4,
-    "deadline_pct": 0.27,
-    "delay_pct": 0.23,
-    "refrig_pct": 0.23,
+    "deadline_pct": 0.25,
+    "delay_pct": 0.22,
+    "refrig_pct": 0.27,
     "pop_size": 500,
     "generations": 10000,
     "mutation_rate": 0.05,
-    "seed": 20261022
+    "seed": 20261023
   },
-  "final_score": 174249.9,
+  "final_score": 36213.6,
   "summary": {
-    "total_fleet_mileage": 249.9,
+    "total_fleet_mileage": 213.59999999999997,
     "deadline_violations": 0,
-    "refrig_violations": 34,
-    "capacity_violations": 20
+    "refrig_violations": 8,
+    "capacity_violations": 3
   },
   "convergence": [
     {
       "generation": 0,
-      "score": 289427.2,
-      "distance_score": 567.2,
-      "minutes_late": 2905.9999999999995,
-      "late_count": 59
+      "score": 114125.7,
+      "distance_score": 515.7000000000002,
+      "minutes_late": 1160.9999999999998,
+      "late_count": 40
     },
     {
       "generation": 50,
-      "score": 193107.8,
-      "distance_score": 517.8,
-      "minutes_late": 759.0,
-      "late_count": 35
+      "score": 49932.86666666667,
+      "distance_score": 446.20000000000005,
+      "minutes_late": 308.6666666666667,
+      "late_count": 22
     },
     {
       "generation": 100,
-      "score": 179708.66666666666,
-      "distance_score": 552.0,
-      "minutes_late": 295.6666666666667,
-      "late_count": 11
+      "score": 37737.2,
+      "distance_score": 417.20000000000016,
+      "minutes_late": 32.0,
+      "late_count": 5
     },
     {
       "generation": 150,
-      "score": 176034.8,
-      "distance_score": 514.8000000000002,
-      "minutes_late": 92.0,
-      "late_count": 3
+      "score": 36382.2,
+      "distance_score": 382.2000000000001,
+      "minutes_late": 0,
+      "late_count": 0
     },
     {
       "generation": 200,
-      "score": 174469.8,
-      "distance_score": 469.8000000000002,
+      "score": 36317.7,
+      "distance_score": 317.70000000000005,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 250,
-      "score": 174388.0,
-      "distance_score": 388.0000000000001,
+      "score": 36278.0,
+      "distance_score": 278.0,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 300,
-      "score": 174356.3,
-      "distance_score": 356.30000000000024,
+      "score": 36266.8,
+      "distance_score": 266.79999999999995,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 350,
-      "score": 174339.9,
-      "distance_score": 339.9000000000001,
+      "score": 36257.1,
+      "distance_score": 257.1,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 400,
-      "score": 174328.7,
-      "distance_score": 328.7000000000001,
+      "score": 36248.0,
+      "distance_score": 248.00000000000003,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 450,
-      "score": 174321.0,
-      "distance_score": 321.00000000000006,
+      "score": 36237.4,
+      "distance_score": 237.40000000000003,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 500,
-      "score": 174318.7,
-      "distance_score": 318.7,
+      "score": 36230.4,
+      "distance_score": 230.39999999999995,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 550,
-      "score": 174312.9,
-      "distance_score": 312.8999999999999,
+      "score": 36224.1,
+      "distance_score": 224.09999999999994,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 600,
-      "score": 174305.4,
-      "distance_score": 305.3999999999999,
+      "score": 36219.4,
+      "distance_score": 219.39999999999998,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 650,
-      "score": 174291.7,
-      "distance_score": 291.7,
+      "score": 36216.9,
+      "distance_score": 216.89999999999995,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 700,
-      "score": 174275.8,
-      "distance_score": 275.8,
+      "score": 36216.6,
+      "distance_score": 216.59999999999997,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 750,
-      "score": 174269.3,
-      "distance_score": 269.3,
+      "score": 36216.2,
+      "distance_score": 216.19999999999996,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 800,
-      "score": 174268.1,
-      "distance_score": 268.1000000000001,
+      "score": 36216.2,
+      "distance_score": 216.19999999999996,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 850,
-      "score": 174265.2,
-      "distance_score": 265.2000000000001,
+      "score": 36215.5,
+      "distance_score": 215.49999999999994,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 900,
-      "score": 174259.9,
-      "distance_score": 259.90000000000003,
+      "score": 36214.7,
+      "distance_score": 214.7,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 950,
-      "score": 174254.7,
-      "distance_score": 254.70000000000005,
+      "score": 36214.7,
+      "distance_score": 214.7,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 1000,
-      "score": 174254.3,
-      "distance_score": 254.30000000000004,
+      "score": 36214.5,
+      "distance_score": 214.5,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 1050,
-      "score": 174254.3,
-      "distance_score": 254.30000000000004,
+      "score": 36214.5,
+      "distance_score": 214.5,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 1100,
-      "score": 174252.5,
-      "distance_score": 252.50000000000009,
+      "score": 36214.5,
+      "distance_score": 214.5,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 1150,
-      "score": 174252.1,
-      "distance_score": 252.10000000000008,
+      "score": 36214.5,
+      "distance_score": 214.5,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 1200,
-      "score": 174252.1,
-      "distance_score": 252.10000000000008,
+      "score": 36214.5,
+      "distance_score": 214.5,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 1250,
-      "score": 174251.9,
-      "distance_score": 251.9000000000001,
+      "score": 36214.5,
+      "distance_score": 214.5,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 1300,
-      "score": 174251.9,
-      "distance_score": 251.9000000000001,
+      "score": 36214.5,
+      "distance_score": 214.5,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 1350,
-      "score": 174250.6,
-      "distance_score": 250.6000000000001,
+      "score": 36214.5,
+      "distance_score": 214.5,
       "minutes_late": 0,
       "late_count": 0
     },
     {
       "generation": 1400,
-      "score": 174249.9,
-      "distance_score": 249.90000000000012,
+      "score": 36214.5,
+      "distance_score": 214.5,
       "minutes_late": 0,
       "late_count": 0
     },
     {
-      "generation": 1450,
-      "score": 174249.9,
-      "distance_score": 249.90000000000012,
-      "minutes_late": 0,
-      "late_count": 0
-    },
-    {
-      "generation": 1500,
-      "score": 174249.9,
-      "distance_score": 249.90000000000012,
-      "minutes_late": 0,
-      "late_count": 0
-    },
-    {
-      "generation": 1550,
-      "score": 174249.9,
-      "distance_score": 249.90000000000012,
-      "minutes_late": 0,
-      "late_count": 0
-    },
-    {
-      "generation": 1600,
-      "score": 174249.9,
-      "distance_score": 249.90000000000012,
-      "minutes_late": 0,
-      "late_count": 0
-    },
-    {
-      "generation": 1608,
-      "score": 174249.9,
-      "distance_score": 249.90000000000012,
+      "generation": 1436,
+      "score": 36213.6,
+      "distance_score": 213.6,
       "minutes_late": 0,
       "late_count": 0
     }
@@ -266,66 +238,66 @@
       "stops": [
         {
           "package_ids": [
-            56,
-            182
+            47,
+            20,
+            112,
+            130,
+            134,
+            140
           ],
-          "address": "1300 N 5600 W, Salt Lake City, UT 84116",
-          "arrival_time": "2000-01-01T09:57:00",
+          "address": "4400 S 700 E, Salt Lake City, UT 84107",
+          "arrival_time": "2000-01-01T09:33:40",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            110,
-            135,
-            222,
-            95,
-            180,
-            185,
-            190,
-            223,
-            226
+            52,
+            19
           ],
-          "address": "2100 N Redwood Rd, Salt Lake City, UT 84116",
-          "arrival_time": "2000-01-01T10:06:20",
+          "address": "860 E 4800 S, Salt Lake City, UT 84107",
+          "arrival_time": "2000-01-01T09:37:40",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            29,
-            41,
-            203
+            67,
+            129
           ],
-          "address": "1480 N 2200 W, Salt Lake City, UT 84116",
-          "arrival_time": "2000-01-01T10:07:40",
+          "address": "3900 S Wasatch Blvd, Salt Lake City, UT 84124",
+          "arrival_time": "2000-01-01T09:42:40",
           "status": "N/A"
         },
         {
           "package_ids": [
-            78,
-            31,
-            142
+            79,
+            80,
+            141
           ],
-          "address": "300 State St, Salt Lake City, UT 84103",
-          "arrival_time": "2000-01-01T10:14:00",
+          "address": "4300 S 1300 E, Millcreek, UT 84117",
+          "arrival_time": "2000-01-01T09:45:40",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            12,
-            85,
-            106
+            92,
+            161
           ],
-          "address": "233 Canyon Rd, Salt Lake City, UT 84103",
-          "arrival_time": "2000-01-01T10:15:20",
-          "status": "N/A"
+          "address": "2530 S 500 E, Salt Lake City, UT 84106",
+          "arrival_time": "2000-01-01T09:54:20",
+          "status": "ON TIME"
         },
         {
           "package_ids": [
-            32
+            45,
+            21,
+            77,
+            150,
+            154,
+            167
           ],
-          "address": "600 E 900 South, Salt Lake City, UT 84105",
-          "arrival_time": "2000-01-01T10:23:20",
-          "status": "N/A"
+          "address": "1330 2100 S, Salt Lake City, UT 84106",
+          "arrival_time": "2000-01-01T09:56:00",
+          "status": "ON TIME"
         }
       ]
     },
@@ -334,58 +306,80 @@
       "stops": [
         {
           "package_ids": [
-            17,
-            169,
-            145,
-            59
+            166,
+            46,
+            55
+          ],
+          "address": "2900 W 2100 S, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T08:41:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            89
+          ],
+          "address": "3060 Lester St, West Valley City, UT 84119",
+          "arrival_time": "2000-01-01T08:46:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            50,
+            18,
+            28
+          ],
+          "address": "3640 S 700 W, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T08:50:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            35,
+            133,
+            135
+          ],
+          "address": "5025 State St, Murray, UT 84107",
+          "arrival_time": "2000-01-01T08:58:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            49,
+            180
           ],
           "address": "3800 S West Temple, Salt Lake City, UT 84115",
-          "arrival_time": "2000-01-01T09:32:40",
+          "arrival_time": "2000-01-01T09:04:20",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            107,
-            112,
-            115,
-            199,
-            236
+            57,
+            100,
+            144,
+            169
           ],
-          "address": "1700 W 4700 S, Taylorsville, UT 84123",
-          "arrival_time": "2000-01-01T09:39:00",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            8,
-            133,
-            213,
-            215
-          ],
-          "address": "4100 S 4000 W, West Valley City, UT 84120",
-          "arrival_time": "2000-01-01T09:47:40",
+          "address": "3595 Main St, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T09:08:20",
           "status": "N/A"
         },
         {
           "package_ids": [
-            44,
-            40,
-            179
+            151,
+            168
           ],
-          "address": "2300 Parkway Blvd, West Valley City, UT 84119",
-          "arrival_time": "2000-01-01T09:52:40",
-          "status": "ON TIME"
+          "address": "2780 S Main St, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T09:08:40",
+          "status": "N/A"
         },
         {
           "package_ids": [
-            9,
-            46,
-            91,
-            108
+            6,
+            34,
+            66
           ],
-          "address": "195 W Oakland Ave, Salt Lake City, UT 84115",
-          "arrival_time": "2000-01-01T10:02:00",
-          "status": "N/A"
+          "address": "3120 S Highland Dr, Salt Lake City, UT 84106",
+          "arrival_time": "2000-01-01T09:13:20",
+          "status": "ON TIME"
         }
       ]
     },
@@ -394,63 +388,71 @@
       "stops": [
         {
           "package_ids": [
-            86,
-            93,
-            129,
-            177,
-            187,
-            221,
-            7,
-            139,
-            89,
-            24,
-            128,
-            54
+            15,
+            53,
+            123
           ],
-          "address": "1330 2100 S, Salt Lake City, UT 84106",
-          "arrival_time": "2000-01-01T08:35:40",
+          "address": "450 E Vine St, Murray, UT 84107",
+          "arrival_time": "2000-01-01T09:35:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            59,
+            122,
+            143
+          ],
+          "address": "5025 State St, Murray, UT 84107",
+          "arrival_time": "2000-01-01T09:37:00",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            103,
+            41,
+            88,
+            108,
+            148
+          ],
+          "address": "8000 S 700 E, Sandy, UT 84070",
+          "arrival_time": "2000-01-01T09:52:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            56,
+            97
+          ],
+          "address": "7100 S 300 W, Midvale, UT 84047",
+          "arrival_time": "2000-01-01T10:01:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            87,
+            158
+          ],
+          "address": "6400 S 300 W, Murray, UT 84107",
+          "arrival_time": "2000-01-01T10:03:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            16,
+            95,
+            174
+          ],
+          "address": "5500 S Redwood Rd, Taylorsville, UT 84123",
+          "arrival_time": "2000-01-01T10:08:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
             156,
-            5,
-            30,
-            74,
-            98,
-            126
+            11,
+            127
           ],
-          "address": "1060 Dalton Ave S, Salt Lake City, UT 84104",
-          "arrival_time": "2000-01-01T08:42:00",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            58,
-            62
-          ],
-          "address": "2100 N Redwood Rd, Salt Lake City, UT 84116",
-          "arrival_time": "2000-01-01T08:54:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            163,
-            0,
-            157
-          ],
-          "address": "1900 W North Temple, Salt Lake City, UT 84116",
-          "arrival_time": "2000-01-01T08:55:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            68,
-            43
-          ],
-          "address": "750 W 900 S, Salt Lake City, UT 84104",
-          "arrival_time": "2000-01-01T09:04:00",
+          "address": "230 W 5300 S, Murray, UT 84107",
+          "arrival_time": "2000-01-01T10:10:40",
           "status": "ON TIME"
         }
       ]
@@ -460,98 +462,72 @@
       "stops": [
         {
           "package_ids": [
-            36,
-            109
+            165,
+            173
           ],
-          "address": "5400 W Daybreak Pkwy, South Jordan, UT 84095",
-          "arrival_time": "2000-01-01T10:06:20",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            140,
-            90,
-            207,
-            228
-          ],
-          "address": "9800 S Redwood Rd, South Jordan, UT 84095",
-          "arrival_time": "2000-01-01T10:15:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            18,
-            19,
-            37,
-            117,
-            220
-          ],
-          "address": "11800 S River Heights Dr, South Jordan, UT 84095",
-          "arrival_time": "2000-01-01T10:24:40",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            23,
-            172,
-            196,
-            200
-          ],
-          "address": "11400 S Lone Peak Pkwy, Draper, UT 84020",
-          "arrival_time": "2000-01-01T10:32:20",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            96,
-            189
-          ],
-          "address": "10600 S Sego Lily Dr, Sandy, UT 84094",
-          "arrival_time": "2000-01-01T10:36:20",
+          "address": "410 S State St, Salt Lake City, UT 84111",
+          "arrival_time": "2000-01-01T09:46:00",
           "status": "ON TIME"
         },
         {
           "package_ids": [
             76,
-            6,
-            122,
-            183,
-            205
+            105
           ],
-          "address": "8000 S 700 E, Sandy, UT 84070",
-          "arrival_time": "2000-01-01T10:48:20",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            202,
-            52,
-            99
-          ],
-          "address": "7800 S State St, Midvale, UT 84047",
-          "arrival_time": "2000-01-01T10:54:00",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            21,
-            94,
-            114,
-            144,
-            176
-          ],
-          "address": "8200 S 300 W, West Jordan, UT 84088",
-          "arrival_time": "2000-01-01T10:56:00",
+          "address": "750 W 900 S, Salt Lake City, UT 84104",
+          "arrival_time": "2000-01-01T09:49:40",
           "status": "N/A"
         },
         {
           "package_ids": [
-            104,
-            161,
-            206
+            111
           ],
-          "address": "4400 S 700 E, Salt Lake City, UT 84107",
-          "arrival_time": "2000-01-01T11:12:20",
+          "address": "1060 Dalton Ave S, Salt Lake City, UT 84104",
+          "arrival_time": "2000-01-01T09:56:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            101,
+            5,
+            8,
+            178
+          ],
+          "address": "5100 South 2700 West, Salt Lake City, UT 84118",
+          "arrival_time": "2000-01-01T10:11:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            43,
+            72,
+            118,
+            162
+          ],
+          "address": "4550 W 5400 S, Kearns, UT 84118",
+          "arrival_time": "2000-01-01T10:16:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            145,
+            25,
+            58,
+            102,
+            176
+          ],
+          "address": "3600 W 9000 S, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T10:29:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            0,
+            37,
+            84
+          ],
+          "address": "1700 W 4700 S, Taylorsville, UT 84123",
+          "arrival_time": "2000-01-01T10:48:00",
           "status": "N/A"
         }
       ]
@@ -561,59 +537,82 @@
       "stops": [
         {
           "package_ids": [
-            80
+            91
           ],
-          "address": "2920 S Main St, Salt Lake City, UT 84115",
-          "arrival_time": "2000-01-01T08:34:00",
+          "address": "5383 South 900 East #104, Salt Lake City, UT 84117",
+          "arrival_time": "2000-01-01T08:41:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            26,
+            4
+          ],
+          "address": "7200 S 1300 E, Midvale, UT 84047",
+          "arrival_time": "2000-01-01T08:47:20",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            174,
-            193
+            109,
+            155,
+            142
           ],
-          "address": "2600 S 600 W, Salt Lake City, UT 84115",
-          "arrival_time": "2000-01-01T08:35:40",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            155
-          ],
-          "address": "380 W 2880 S, Salt Lake City, UT 84115",
-          "arrival_time": "2000-01-01T08:39:00",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            212,
-            229
-          ],
-          "address": "4820 S 4000 W, West Valley City, UT 84120",
-          "arrival_time": "2000-01-01T08:51:00",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            184,
-            28,
-            230
-          ],
-          "address": "2600 Taylorsville Blvd, Salt Lake City, UT 84118",
-          "arrival_time": "2000-01-01T08:55:20",
+          "address": "12600 S 900 E, Draper, UT 84020",
+          "arrival_time": "2000-01-01T09:11:00",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            45,
-            166,
-            192,
-            204,
-            217
+            10
           ],
-          "address": "5025 State St, Murray, UT 84107",
-          "arrival_time": "2000-01-01T09:04:00",
+          "address": "13200 S Minuteman Dr, Draper, UT 84020",
+          "arrival_time": "2000-01-01T09:14:20",
           "status": "N/A"
+        },
+        {
+          "package_ids": [
+            73
+          ],
+          "address": "11800 S River Heights Dr, South Jordan, UT 84095",
+          "arrival_time": "2000-01-01T09:21:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            36,
+            42
+          ],
+          "address": "11400 S District Dr, South Jordan, UT 84095",
+          "arrival_time": "2000-01-01T09:24:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            14
+          ],
+          "address": "9200 S 300 W, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T09:36:20",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            152,
+            121
+          ],
+          "address": "8200 S 300 W, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T09:40:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            93,
+            103,
+            181
+          ],
+          "address": "5600 S 300 W, Murray, UT 84107",
+          "arrival_time": "2000-01-01T09:50:00",
+          "status": "ON TIME"
         }
       ]
     },
@@ -622,38 +621,48 @@
       "stops": [
         {
           "package_ids": [
-            118,
-            175
+            33
           ],
-          "address": "2530 S 500 E, Salt Lake City, UT 84106",
-          "arrival_time": "2000-01-01T08:35:00",
+          "address": "4600 S West Temple, Murray, UT 84107",
+          "arrival_time": "2000-01-01T09:35:40",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            1,
-            164,
-            181,
-            225
+            40,
+            63
           ],
-          "address": "670 S 700 E, Salt Lake City, UT 84102",
-          "arrival_time": "2000-01-01T08:44:20",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            151
-          ],
-          "address": "790 E 2100 S, Salt Lake City, UT 84106",
-          "arrival_time": "2000-01-01T08:53:00",
+          "address": "3200 W 3100 S, West Valley City, UT 84119",
+          "arrival_time": "2000-01-01T09:46:20",
           "status": "N/A"
         },
         {
           "package_ids": [
-            121
+            74,
+            107,
+            114,
+            139
           ],
-          "address": "3120 S Highland Dr, Salt Lake City, UT 84106",
-          "arrival_time": "2000-01-01T08:54:00",
+          "address": "3148 S 1100 W, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T09:50:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            170
+          ],
+          "address": "380 W 2880 S, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T09:52:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            39,
+            99,
+            119
+          ],
+          "address": "2835 Main St, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T09:56:00",
           "status": "N/A"
         }
       ]
@@ -663,61 +672,60 @@
       "stops": [
         {
           "package_ids": [
-            11,
-            159,
-            3,
-            66
+            17,
+            106,
+            177
           ],
-          "address": "4600 S West Temple, Murray, UT 84107",
-          "arrival_time": "2000-01-01T08:05:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            50
-          ],
-          "address": "1488 4800 S, Salt Lake City, UT 84123",
-          "arrival_time": "2000-01-01T08:10:20",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            134,
-            2,
-            218
-          ],
-          "address": "8200 S 300 W, West Jordan, UT 84088",
-          "arrival_time": "2000-01-01T08:22:20",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            53,
-            170,
-            171
-          ],
-          "address": "9200 S 300 W, West Jordan, UT 84088",
-          "arrival_time": "2000-01-01T08:26:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            27,
-            63,
-            65,
-            232
-          ],
-          "address": "10200 S 1300 E, Sandy, UT 84092",
-          "arrival_time": "2000-01-01T08:38:00",
+          "address": "670 S 700 E, Salt Lake City, UT 84102",
+          "arrival_time": "2000-01-01T09:44:20",
           "status": "N/A"
         },
         {
           "package_ids": [
-            148
+            12,
+            24
           ],
-          "address": "10600 S Sego Lily Dr, Sandy, UT 84094",
-          "arrival_time": "2000-01-01T08:40:20",
+          "address": "233 Canyon Rd, Salt Lake City, UT 84103",
+          "arrival_time": "2000-01-01T09:50:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            29,
+            71,
+            86,
+            138
+          ],
+          "address": "300 State St, Salt Lake City, UT 84103",
+          "arrival_time": "2000-01-01T09:52:00",
           "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            48,
+            116
+          ],
+          "address": "2250 N 1200 W, Salt Lake City, UT 84116",
+          "arrival_time": "2000-01-01T09:58:20",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            2,
+            68,
+            157
+          ],
+          "address": "1900 W North Temple, Salt Lake City, UT 84116",
+          "arrival_time": "2000-01-01T10:01:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            124
+          ],
+          "address": "195 W Oakland Ave, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T10:14:20",
+          "status": "N/A"
         }
       ]
     },
@@ -726,58 +734,71 @@
       "stops": [
         {
           "package_ids": [
-            178,
-            188
+            85
           ],
-          "address": "5100 South 2700 West, Salt Lake City, UT 84118",
-          "arrival_time": "2000-01-01T08:43:00",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            123,
-            231
-          ],
-          "address": "6700 S 4000 W, West Jordan, UT 84084",
-          "arrival_time": "2000-01-01T08:50:40",
+          "address": "6100 W 3500 S, West Valley City, UT 84128",
+          "arrival_time": "2000-01-01T08:51:40",
           "status": "N/A"
         },
         {
           "package_ids": [
-            38,
-            72
-          ],
-          "address": "5200 S 4400 W, Kearns, UT 84118",
-          "arrival_time": "2000-01-01T08:54:00",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            69
+            22,
+            27
           ],
           "address": "4800 W Magna Main St, Magna, UT 84044",
-          "arrival_time": "2000-01-01T09:10:00",
+          "arrival_time": "2000-01-01T08:56:40",
           "status": "N/A"
         },
         {
           "package_ids": [
-            16,
-            100,
-            211,
-            214
+            44,
+            175
           ],
           "address": "3300 S 8400 W, Magna, UT 84044",
-          "arrival_time": "2000-01-01T09:12:40",
+          "arrival_time": "2000-01-01T08:59:20",
           "status": "N/A"
         },
         {
           "package_ids": [
-            195,
-            149
+            82
           ],
-          "address": "3200 W 3100 S, West Valley City, UT 84119",
+          "address": "1300 N 5600 W, Salt Lake City, UT 84116",
+          "arrival_time": "2000-01-01T09:21:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            81
+          ],
+          "address": "2100 N Redwood Rd, Salt Lake City, UT 84116",
           "arrival_time": "2000-01-01T09:30:20",
           "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            23,
+            30
+          ],
+          "address": "1390 S 2200 W, Salt Lake City, UT 84104",
+          "arrival_time": "2000-01-01T09:41:40",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            38
+          ],
+          "address": "1710 S Redwood Rd, Salt Lake City, UT 84104",
+          "arrival_time": "2000-01-01T09:43:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            160,
+            164
+          ],
+          "address": "1234 W 2100 S, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T09:45:40",
+          "status": "N/A"
         }
       ]
     },
@@ -786,43 +807,49 @@
       "stops": [
         {
           "package_ids": [
-            49,
-            25,
-            61,
-            113,
-            154,
-            233,
-            111
+            13
           ],
-          "address": "8400 S 1300 W, West Jordan, UT 84088",
-          "arrival_time": "2000-01-01T08:53:00",
+          "address": "2600 S 600 W, Salt Lake City, UT 84115",
+          "arrival_time": "2000-01-01T08:35:20",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            138,
-            152
+            7,
+            75
           ],
-          "address": "3600 W 9000 S, West Jordan, UT 84088",
-          "arrival_time": "2000-01-01T08:57:00",
+          "address": "1234 W 2100 S, Salt Lake City, UT 84119",
+          "arrival_time": "2000-01-01T08:39:00",
           "status": "ON TIME"
         },
         {
           "package_ids": [
             132,
-            198
+            65,
+            136
           ],
-          "address": "11400 S District Dr, South Jordan, UT 84095",
-          "arrival_time": "2000-01-01T09:09:00",
-          "status": "N/A"
+          "address": "4820 S 4000 W, West Valley City, UT 84120",
+          "arrival_time": "2000-01-01T08:53:00",
+          "status": "ON TIME"
         },
         {
           "package_ids": [
-            234,
-            84
+            159,
+            9
           ],
-          "address": "13200 S Minuteman Dr, Draper, UT 84020",
-          "arrival_time": "2000-01-01T09:18:40",
+          "address": "3575 W Valley Central Station bus Loop, West Valley City, UT 84119",
+          "arrival_time": "2000-01-01T09:00:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            147,
+            32,
+            69,
+            70
+          ],
+          "address": "2300 Parkway Blvd, West Valley City, UT 84119",
+          "arrival_time": "2000-01-01T09:02:20",
           "status": "ON TIME"
         }
       ]
@@ -832,67 +859,73 @@
       "stops": [
         {
           "package_ids": [
-            160,
-            55,
-            71,
+            115,
+            137
+          ],
+          "address": "5200 S 4400 W, Kearns, UT 84118",
+          "arrival_time": "2000-01-01T08:49:40",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            94
+          ],
+          "address": "4550 W 5400 S, Kearns, UT 84118",
+          "arrival_time": "2000-01-01T08:52:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            90
+          ],
+          "address": "6700 S 4000 W, West Jordan, UT 84084",
+          "arrival_time": "2000-01-01T08:55:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            153,
+            54
+          ],
+          "address": "9800 S Redwood Rd, South Jordan, UT 84095",
+          "arrival_time": "2000-01-01T09:11:00",
+          "status": "ON TIME"
+        },
+        {
+          "package_ids": [
+            51,
+            62,
+            78
+          ],
+          "address": "11400 S Lone Peak Pkwy, Draper, UT 84020",
+          "arrival_time": "2000-01-01T09:26:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            104
+          ],
+          "address": "10600 S Sego Lily Dr, Sandy, UT 84094",
+          "arrival_time": "2000-01-01T09:30:00",
+          "status": "N/A"
+        },
+        {
+          "package_ids": [
+            163,
+            1,
             146
           ],
-          "address": "410 S State St, Salt Lake City, UT 84111",
-          "arrival_time": "2000-01-01T09:46:00",
+          "address": "10200 S 1300 E, Sandy, UT 84092",
+          "arrival_time": "2000-01-01T09:32:20",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            15,
-            168
+            113
           ],
-          "address": "2250 N 1200 W, Salt Lake City, UT 84116",
-          "arrival_time": "2000-01-01T09:54:40",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            165
-          ],
-          "address": "1900 W North Temple, Salt Lake City, UT 84116",
-          "arrival_time": "2000-01-01T09:58:00",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            153
-          ],
-          "address": "2900 W 2100 S, Salt Lake City, UT 84119",
-          "arrival_time": "2000-01-01T10:11:20",
+          "address": "6200 S State St, Murray, UT 84107",
+          "arrival_time": "2000-01-01T09:53:00",
           "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            10,
-            224,
-            235
-          ],
-          "address": "3060 Lester St, West Valley City, UT 84119",
-          "arrival_time": "2000-01-01T10:15:40",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            34,
-            137,
-            143
-          ],
-          "address": "3365 S 900 W, Salt Lake City, UT 84119",
-          "arrival_time": "2000-01-01T10:18:20",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            42
-          ],
-          "address": "3640 S 700 W, Salt Lake City, UT 84119",
-          "arrival_time": "2000-01-01T10:21:20",
-          "status": "N/A"
         }
       ]
     },
@@ -901,267 +934,85 @@
       "stops": [
         {
           "package_ids": [
-            26,
-            60,
-            73,
-            124,
-            208
+            83,
+            96
           ],
-          "address": "3595 Main St, Salt Lake City, UT 84115",
-          "arrival_time": "2000-01-01T09:33:20",
+          "address": "1488 4800 S, Salt Lake City, UT 84123",
+          "arrival_time": "2000-01-01T09:37:40",
           "status": "N/A"
         },
         {
           "package_ids": [
-            120,
-            14,
-            83,
-            130,
-            194
+            110,
+            149
           ],
-          "address": "2780 S Main St, Salt Lake City, UT 84115",
-          "arrival_time": "2000-01-01T09:33:40",
+          "address": "1200 W 7800 S, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T09:51:00",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            22,
-            131
+            61
           ],
-          "address": "4300 S 1300 E, Millcreek, UT 84117",
-          "arrival_time": "2000-01-01T09:43:00",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            57,
-            67
-          ],
-          "address": "3900 S Wasatch Blvd, Salt Lake City, UT 84124",
-          "arrival_time": "2000-01-01T09:46:00",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            20
-          ],
-          "address": "4580 S 2300 E, Holladay, UT 84117",
-          "arrival_time": "2000-01-01T09:49:20",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            219,
-            47
-          ],
-          "address": "5383 South 900 East #104, Salt Lake City, UT 84117",
-          "arrival_time": "2000-01-01T09:55:20",
+          "address": "8400 S 1300 W, West Jordan, UT 84088",
+          "arrival_time": "2000-01-01T09:55:00",
           "status": "ON TIME"
         },
         {
           "package_ids": [
             64,
-            105
+            98
           ],
-          "address": "6351 South 900 East, Murray, UT 84121",
-          "arrival_time": "2000-01-01T09:55:40",
-          "status": "N/A"
-        }
-      ]
-    },
-    {
-      "truck_id": 12,
-      "stops": [
-        {
-          "package_ids": [
-            191,
-            33,
-            227
-          ],
-          "address": "2835 Main St, Salt Lake City, UT 84115",
-          "arrival_time": "2000-01-01T08:03:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            125,
-            150,
-            39
-          ],
-          "address": "2780 S Main St, Salt Lake City, UT 84115",
-          "arrival_time": "2000-01-01T08:04:00",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            119,
-            87,
-            186
-          ],
-          "address": "860 E 4800 S, Salt Lake City, UT 84107",
-          "arrival_time": "2000-01-01T08:15:20",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            136,
-            210
-          ],
-          "address": "5383 South 900 East #104, Salt Lake City, UT 84117",
-          "arrival_time": "2000-01-01T08:18:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            158
-          ],
-          "address": "6351 South 900 East, Murray, UT 84121",
-          "arrival_time": "2000-01-01T08:19:00",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            102
-          ],
-          "address": "7100 S 300 W, Midvale, UT 84047",
-          "arrival_time": "2000-01-01T08:28:20",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            4,
-            92
-          ],
-          "address": "1200 W 7800 S, West Jordan, UT 84088",
-          "arrival_time": "2000-01-01T08:34:20",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            13,
-            48
-          ],
-          "address": "6400 S 300 W, Murray, UT 84107",
-          "arrival_time": "2000-01-01T08:41:40",
+          "address": "5400 W Daybreak Pkwy, South Jordan, UT 84095",
+          "arrival_time": "2000-01-01T10:09:20",
           "status": "N/A"
         },
         {
           "package_ids": [
-            116,
-            101
+            60,
+            171
           ],
-          "address": "5600 S 300 W, Murray, UT 84107",
-          "arrival_time": "2000-01-01T08:44:20",
-          "status": "ON TIME"
-        }
-      ]
-    },
-    {
-      "truck_id": 13,
-      "stops": [
-        {
-          "package_ids": [
-            173,
-            51
-          ],
-          "address": "5500 S Redwood Rd, Taylorsville, UT 84123",
-          "arrival_time": "2000-01-01T09:40:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            127,
-            197
-          ],
-          "address": "6100 W 3500 S, West Valley City, UT 84128",
-          "arrival_time": "2000-01-01T09:58:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            209,
-            97
-          ],
-          "address": "1234 W 2100 S, Salt Lake City, UT 84119",
-          "arrival_time": "2000-01-01T10:15:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            81,
-            162
-          ],
-          "address": "2010 W 500 S, Salt Lake City, UT 84104",
-          "arrival_time": "2000-01-01T10:16:40",
+          "address": "11400 S District Dr, South Jordan, UT 84095",
+          "arrival_time": "2000-01-01T10:24:00",
           "status": "N/A"
         },
         {
           "package_ids": [
-            70
+            126
           ],
-          "address": "3148 S 1100 W, Salt Lake City, UT 84119",
-          "arrival_time": "2000-01-01T10:21:00",
+          "address": "11800 S River Heights Dr, South Jordan, UT 84095",
+          "arrival_time": "2000-01-01T10:26:40",
           "status": "N/A"
         },
         {
           "package_ids": [
-            141,
-            216
-          ],
-          "address": "4550 W 5400 S, Kearns, UT 84118",
-          "arrival_time": "2000-01-01T10:35:40",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            88,
-            75
-          ],
-          "address": "7400 S Redwood Rd, West Jordan, UT 84084",
-          "arrival_time": "2000-01-01T10:40:40",
-          "status": "ON TIME"
-        },
-        {
-          "package_ids": [
-            82
-          ],
-          "address": "1200 W 7800 S, West Jordan, UT 84088",
-          "arrival_time": "2000-01-01T10:45:00",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            201
+            31,
+            120
           ],
           "address": "9400 S 700 E, Sandy, UT 84070",
-          "arrival_time": "2000-01-01T11:00:40",
-          "status": "N/A"
-        },
-        {
-          "package_ids": [
-            35,
-            167
-          ],
-          "address": "7100 S 300 W, Midvale, UT 84047",
-          "arrival_time": "2000-01-01T11:15:20",
+          "arrival_time": "2000-01-01T10:38:20",
           "status": "ON TIME"
         },
         {
           "package_ids": [
-            77,
-            147
+            179,
+            125,
+            131
           ],
-          "address": "230 W 5300 S, Murray, UT 84107",
-          "arrival_time": "2000-01-01T11:21:20",
-          "status": "N/A"
+          "address": "7800 S State St, Midvale, UT 84047",
+          "arrival_time": "2000-01-01T10:49:00",
+          "status": "ON TIME"
         },
         {
           "package_ids": [
-            79
+            172,
+            3,
+            117,
+            128
           ],
-          "address": "450 E Vine St, Murray, UT 84107",
-          "arrival_time": "2000-01-01T11:26:00",
-          "status": "N/A"
+          "address": "6351 South 900 East, Murray, UT 84121",
+          "arrival_time": "2000-01-01T10:59:20",
+          "status": "ON TIME"
         }
       ]
     }
